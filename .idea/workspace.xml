@@ -4,7 +4,10 @@
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databases/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/databases/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
       <workItem from="1584232378062" duration="1354000" />
       <workItem from="1584296081203" duration="21550000" />
       <workItem from="1584546501870" duration="2458000" />
-      <workItem from="1585188087493" duration="9674000" />
+      <workItem from="1585188087493" duration="11369000" />
     </task>
     <servers />
   </component>
@@ -90,26 +93,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="736" height="302" key="GridCell.Tab.0.bottom" timestamp="1585202027816">
+    <state width="780" height="302" key="GridCell.Tab.0.bottom" timestamp="1585265244008">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="736" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
-    <state width="736" height="302" key="GridCell.Tab.0.center" timestamp="1585202027816">
+    <state width="780" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244008" />
+    <state width="780" height="302" key="GridCell.Tab.0.center" timestamp="1585265244007">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="736" height="302" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
-    <state width="736" height="302" key="GridCell.Tab.0.left" timestamp="1585202027816">
+    <state width="780" height="302" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244007" />
+    <state width="780" height="302" key="GridCell.Tab.0.left" timestamp="1585265244007">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="736" height="302" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
-    <state width="736" height="302" key="GridCell.Tab.0.right" timestamp="1585202027816">
+    <state width="780" height="302" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244007" />
+    <state width="780" height="302" key="GridCell.Tab.0.right" timestamp="1585265244008">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="736" height="302" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
-    <state x="740" y="416" key="SettingsEditor" timestamp="1584389703642">
+    <state width="780" height="302" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244008" />
+    <state x="740" y="416" key="SettingsEditor" timestamp="1585264938744">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="740" y="416" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1584389703642" />
+    <state x="740" y="416" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1585264938744" />
     <state x="920" y="598" key="com.intellij.ide.util.TipDialog" timestamp="1585196416607">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
