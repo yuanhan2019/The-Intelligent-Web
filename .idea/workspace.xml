@@ -2,12 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/bg.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/story1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/story2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/story3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalAssessment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FinalAssessment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,9 +47,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/web/Week 6 Mongo Solution/Week 6 Mongo Solution" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\FinalAssessment\web\The-Intelligent-Web\public\stylesheets\fontawesome-free-5.12.1-web" />
+      <recent name="G:\FinalAssessment\web\The-Intelligent-Web\public\stylesheets" />
+      <recent name="G:\FinalAssessment\web\The-Intelligent-Web\public" />
+      <recent name="G:\FinalAssessment\web\The-Intelligent-Web\public\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\FinalAssessment\web\The-Intelligent-Web\public\stylesheets" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,6 +75,12 @@
       <updated>1584034003984</updated>
       <workItem from="1584034006810" duration="1583000" />
       <workItem from="1584040074390" duration="25000" />
+      <workItem from="1584040118198" duration="1992000" />
+      <workItem from="1584232277668" duration="93000" />
+      <workItem from="1584232378062" duration="1354000" />
+      <workItem from="1584296081203" duration="21550000" />
+      <workItem from="1584546501870" duration="2458000" />
+      <workItem from="1585188087493" duration="8122000" />
     </task>
     <servers />
   </component>
@@ -47,25 +88,45 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1474" y="698" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585196690553">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1474" y="698" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1585196690553" />
+    <state x="1369" y="333" key="CommitChangelistDialog2" timestamp="1585216035413">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1369" y="333" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1585216035413" />
+    <state x="1679" y="554" key="FileChooserDialogImpl" timestamp="1584481190445">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1679" y="554" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1584481190445" />
     <state x="1048" y="687" key="Github.CreateGistDialog" timestamp="1584034307588">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="1341" height="266" key="GridCell.Tab.0.bottom" timestamp="1584040098411">
+    <state width="736" height="302" key="GridCell.Tab.0.bottom" timestamp="1585202027816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1341" height="266" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1584040098411" />
-    <state width="1341" height="266" key="GridCell.Tab.0.center" timestamp="1584040098411">
+    <state width="736" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
+    <state width="736" height="302" key="GridCell.Tab.0.center" timestamp="1585202027816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1341" height="266" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1584040098411" />
-    <state width="1341" height="266" key="GridCell.Tab.0.left" timestamp="1584040098411">
+    <state width="736" height="302" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
+    <state width="736" height="302" key="GridCell.Tab.0.left" timestamp="1585202027816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1341" height="266" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1584040098411" />
-    <state width="1341" height="266" key="GridCell.Tab.0.right" timestamp="1584040098411">
+    <state width="736" height="302" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
+    <state width="736" height="302" key="GridCell.Tab.0.right" timestamp="1585202027816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1341" height="266" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1584040098411" />
+    <state width="736" height="302" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585202027816" />
+    <state x="740" y="416" key="SettingsEditor" timestamp="1584389703642">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="740" y="416" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1584389703642" />
+    <state x="920" y="598" key="com.intellij.ide.util.TipDialog" timestamp="1585196416607">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="920" y="598" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585196416607" />
   </component>
 </project>
