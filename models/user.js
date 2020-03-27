@@ -10,7 +10,7 @@ var User = new Schema(
          createAt:{type:Date, default:Date.now()}
         // dob: {type: Number},
         // whatever: {type: String} //any other field
-    }
+    },{collection:'user'}
 );
 
 // // Virtual for a character's age
@@ -24,6 +24,6 @@ var User = new Schema(
 //User.set('toObject', {getters: true, virtuals: true});
 
 
-var userModel = mongoose.model('User', User );
+var userModel = mongoose.model('User', User);
 
 module.exports = userModel;

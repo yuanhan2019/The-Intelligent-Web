@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/signup.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,20 @@
       <recent name="G:\FinalAssessment\web\The-Intelligent-Web\public\stylesheets" />
     </key>
   </component>
+  <component name="RunManager" selected="Node.js.bin\www">
+    <configuration name="signup.ejs" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Final_Assessment/FinalAssessment/views/signup.ejs" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.bin\www" />
+      <item itemvalue="JavaScript Debug.signup.ejs" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.signup.ejs" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -70,6 +88,7 @@
       <workItem from="1584546501870" duration="2458000" />
       <workItem from="1585188087493" duration="18975000" />
       <workItem from="1585277305641" duration="7512000" />
+      <workItem from="1585285865065" duration="5117000" />
     </task>
     <servers />
   </component>
@@ -77,10 +96,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585277483464">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="372" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585285871993">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585277483464" />
+    <state x="372" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585285871993" />
     <state x="1474" y="698" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585196690553">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -97,26 +117,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1585285520664">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="778" height="306" key="GridCell.Tab.0.bottom" timestamp="1585290977052">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
-    <state width="780" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
-    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1585285520664">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="778" height="306" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585290977052" />
+    <state width="778" height="306" key="GridCell.Tab.0.center" timestamp="1585290977052">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
-    <state width="780" height="302" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
-    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1585285520664">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="778" height="306" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585290977052" />
+    <state width="778" height="306" key="GridCell.Tab.0.left" timestamp="1585290977052">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
-    <state width="780" height="302" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
-    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1585285520664">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="778" height="306" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585290977052" />
+    <state width="778" height="306" key="GridCell.Tab.0.right" timestamp="1585290977052">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
-    <state width="780" height="302" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
+    <state width="778" height="306" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585290977052" />
     <state x="740" y="416" key="SettingsEditor" timestamp="1585264938744">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
