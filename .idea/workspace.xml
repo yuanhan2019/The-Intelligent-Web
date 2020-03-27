@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/signup.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/web/Week 5 - IndexedDB" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/web/Exercise 1" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -64,7 +73,7 @@
       <workItem from="1584232378062" duration="1354000" />
       <workItem from="1584296081203" duration="21550000" />
       <workItem from="1584546501870" duration="2458000" />
-      <workItem from="1585188087493" duration="12497000" />
+      <workItem from="1585188087493" duration="18975000" />
     </task>
     <servers />
   </component>
@@ -80,30 +89,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1369" y="333" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1585263573537" />
-    <state x="768" y="501" key="FileChooserDialogImpl" timestamp="1585263303937">
+    <state x="768" y="501" key="FileChooserDialogImpl" timestamp="1585272299652">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="768" y="501" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1585263303936" />
+    <state x="768" y="501" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1585272299652" />
     <state x="1048" y="687" key="Github.CreateGistDialog" timestamp="1584034307588">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="780" height="302" key="GridCell.Tab.0.bottom" timestamp="1585265244008">
+    <state width="780" height="302" key="GridCell.Tab.0.bottom" timestamp="1585275319109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="780" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244008" />
-    <state width="780" height="302" key="GridCell.Tab.0.center" timestamp="1585265244007">
+    <state width="780" height="302" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
+    <state width="780" height="302" key="GridCell.Tab.0.center" timestamp="1585275319109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="780" height="302" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244007" />
-    <state width="780" height="302" key="GridCell.Tab.0.left" timestamp="1585265244007">
+    <state width="780" height="302" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
+    <state width="780" height="302" key="GridCell.Tab.0.left" timestamp="1585275319109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="780" height="302" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244007" />
-    <state width="780" height="302" key="GridCell.Tab.0.right" timestamp="1585265244008">
+    <state width="780" height="302" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
+    <state width="780" height="302" key="GridCell.Tab.0.right" timestamp="1585275319109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="780" height="302" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585265244008" />
+    <state width="780" height="302" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585275319109" />
     <state x="740" y="416" key="SettingsEditor" timestamp="1585264938744">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
