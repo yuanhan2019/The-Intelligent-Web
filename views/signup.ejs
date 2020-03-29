@@ -26,7 +26,7 @@
                 <div class="card p-4">
                     <h3 class="text-center mb-3">Create Your Account</h3>
 
-                    <form id="signupForm" action="signupSubmit" method="POST">
+                    <form id="signupForm" onsubmit="onSubmit('/insert')">
                         <div class="form-group">
                             <input type="email" name="address" id="address" required="true" class="form-control" placeholder="Email Address" >
                         </div>
@@ -44,17 +44,19 @@
 
 
                         <div class="form-group">
-                            <input type="password" name="password2" id="password2" required="true" class="form-control" placeholder="Password Again" >
+                            <input type="password" name="password2" id="password2" required="true" class="form-control"  placeholder="Password Again" >
                         </div>
+                        <div id="results" style="margin-top:30px">1233</div>
+
+
 
                         <div class="p-3">
-                            <input type="submit" value="Create an account" onclick="return validate()" class="btn btn-outline-primary btn-block">
+                            <input type="submit" value="Create an account"  class="btn btn-outline-primary btn-block">
                         </div>
 
                         <p class="mt-4">
                             Already have an account ? <a href="./index">Login</a>
                         </p>
-
 
                     </form>
                 </div>

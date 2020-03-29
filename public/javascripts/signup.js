@@ -19,24 +19,26 @@ function sendAjaxQuery(url, data) {
     });
 }
 
+
 function onSubmit(url) {
     var formArray= $("form").serializeArray();
     var data={};
     for (index in formArray){
         data[formArray[index].name]= formArray[index].value;
     }
-    // const data = JSON.stringify($(this).serializeArray());
+    //const data = JSON.stringify($(this).serializeArray());
     sendAjaxQuery(url, data);
     event.preventDefault();
 }
 
+
+/**
 function validate() {
     var pwd1 = document.getElementById("password1").value;
     var pwd2 = document.getElementById("password2").value;
     if(pwd1 != pwd2) {
-        window.alert("The new password you entered does not agree with the confirmation password");
         signupForm.password2.focus();
         return false;
     }
     return true;
-}
+}**/

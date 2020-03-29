@@ -6,12 +6,14 @@ var User = new Schema(
     {
          username: {type: String, required: true, max: 100},
          password: {type: String, required: true, max: 100},
-         address:{type:String,required: true, max: 100},
+         email_address:{type:String,required: true, max: 100},
          createAt:{type:Date, default:Date.now()}
         // dob: {type: Number},
         // whatever: {type: String} //any other field
     },{collection:'user'}
 );
+
+
 
 // // Virtual for a character's age
 // user.virtual('age')
@@ -21,7 +23,7 @@ var User = new Schema(
 //         return result;
 //     });
 
-//User.set('toObject', {getters: true, virtuals: true});
+User.set('toObject', {getters: true, virtuals: true});
 
 
 var userModel = mongoose.model('User', User);
