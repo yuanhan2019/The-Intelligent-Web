@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/signup.js" afterDir="false" />
@@ -102,7 +103,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -112,10 +115,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585285871993">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585470624447">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585277483464" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585470624447" />
     <state x="372" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585285871993" />
     <state x="1474" y="698" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585196690553">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -137,25 +140,25 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="581" height="160" key="GridCell.Tab.0.bottom" timestamp="1585470478355">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1585473137016">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585473137016" />
     <state width="581" height="160" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
-    <state width="581" height="160" key="GridCell.Tab.0.center" timestamp="1585470478355">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1585473137015">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585473137015" />
     <state width="581" height="160" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
-    <state width="581" height="160" key="GridCell.Tab.0.left" timestamp="1585470478355">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1585473137015">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585473137015" />
     <state width="581" height="160" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
-    <state width="581" height="160" key="GridCell.Tab.0.right" timestamp="1585470478355">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1585473137015">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585285520664" />
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585473137015" />
     <state width="581" height="160" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
     <state width="1074" height="324" key="GridCell.Tab.1.bottom" timestamp="1585446680107">
       <screen x="0" y="0" width="2560" height="1400" />

@@ -26,9 +26,14 @@ exports.insert=function(req,res) {
                                 createAt:dat});
                             user.save(function(err,result){
                                 console.log(result.id);
-                                if(err)
+                                if(err) {
                                     res.status(500).send('Invalid data!');
+                                }else{
+                                    res.setHeader('Content-Type',	'application/json');
+                                    res.send(JSON.stringify(userData));
+                                }
                             });
+
                         }
                     });
                    }
