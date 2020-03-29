@@ -4,16 +4,18 @@ function sendAjaxQuery(url, data) {
         data: data,
         dataType: 'json',
         type: 'POST',
-        success: function (dataR) {
+        success:
+            function (dataR) {
             // no need to JSON parse the result, as we are using
             // dataType:json, so JQuery knows it and unpacks the
             // object for us before returning it
             var ret = dataR;
             // in order to have the object printed by alert
             // we need to JSON stringify the object
-            document.getElementById('results').innerHTML= JSON.stringify(ret);
+            document.getElementById('results').innerHTML= success;
         },
         error: function (xhr, status, error) {
+            //document.getElementById('results').innerHTML=error;
             alert('Error: ' + error.message);
         }
     });
