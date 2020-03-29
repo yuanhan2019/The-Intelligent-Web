@@ -7,16 +7,15 @@ exports.insert=function(req,res) {
          res.status(403).send("No data sent!");
     }
     try{
-
-        User.find({email_address: userData.address},
-            function (users) {
+        User.find({email_address: userData.address},'email_address',
+            function (err,users) {
                 if (users.length>0) {
                     res.status(500).send("Address is already registered!");
                 }
                 else{
-                    User.find({username: userData.username},
-                        function (users) {
-                        if (users.length> 0){
+                    User.find({username: userData.username},'username',
+                        function (err,users) {
+                        if (users.length>0){
                             res.status(500).send("Username is already registered!");
                         }
                         else{
@@ -29,11 +28,7 @@ exports.insert=function(req,res) {
                                 console.log(result.id);
                                 if(err)
                                     res.status(500).send('Invalid data!');
-
-                                //res.setHeader('Content-Type', 'application/json');
-                                res.send('Submitted successfully!');
                             });
-                            res.render('index', { title: 'Express' });
                         }
                     });
                    }

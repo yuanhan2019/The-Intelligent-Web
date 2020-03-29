@@ -12,11 +12,12 @@ function sendAjaxQuery(url, data) {
             var ret = dataR;
             // in order to have the object printed by alert
             // we need to JSON stringify the object
-            document.getElementById('results').innerHTML= success;
+            document.getElementById('results').innerHTML=  'success';
         },
         error: function (xhr, status, error) {
             //document.getElementById('results').innerHTML=error;
-            alert('Error: ' + error.message);
+            document.getElementById('results').innerHTML= 'error';
+            //alert('Error: ' + error.message);
         }
     });
 }
