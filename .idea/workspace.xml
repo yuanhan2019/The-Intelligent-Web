@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/sendData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +97,8 @@
       <workItem from="1585277305641" duration="7512000" />
       <workItem from="1585285865065" duration="30517000" />
       <workItem from="1585410376699" duration="21116000" />
+      <workItem from="1585492229788" duration="1417000" />
+      <workItem from="1585540483991" duration="8391000" />
     </task>
     <servers />
   </component>
@@ -115,14 +122,19 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Inspections" timestamp="1585543819280">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1585543819280" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585470624447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585470624447" />
     <state x="372" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585285871993" />
-    <state x="1474" y="698" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585196690553">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="884" y="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585547533335">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="884" y="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1585547533335" />
     <state x="1474" y="698" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1585196690553" />
     <state x="1384" y="551" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585408569388">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -140,25 +152,25 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1585473137016">
+    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1585549581072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585473137016" />
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585549581072" />
     <state width="581" height="160" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
-    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1585473137015">
+    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1585549581071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585473137015" />
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585549581071" />
     <state width="581" height="160" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
-    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1585473137015">
+    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1585549581070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585473137015" />
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585549581070" />
     <state width="581" height="160" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
-    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1585473137015">
+    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1585549581071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585473137015" />
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585549581071" />
     <state width="581" height="160" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1585470478355" />
     <state width="1074" height="324" key="GridCell.Tab.1.bottom" timestamp="1585446680107">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -212,10 +224,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="740" y="416" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1585412819393" />
-    <state x="552" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1585277346690">
+    <state x="552" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1585540484501">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="552" y="352" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585277346690" />
+    <state x="552" y="352" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585540484501" />
     <state x="920" y="598" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585196416607" />
     <state x="1275" y="542" width="897" height="605" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585412356304">
       <screen x="0" y="0" width="2560" height="1400" />

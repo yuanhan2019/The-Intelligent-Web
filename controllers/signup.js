@@ -7,7 +7,7 @@ exports.insert=function(req,res) {
          res.status(403).send("No data sent!");
     }
     try{
-        User.find({email_address: userData.address},'email_address',
+        User.find({email_address: userData.address},'username',
             function (err,users) {
                 if (users.length>0) {
                     res.status(500).send("Address is already registered!");
