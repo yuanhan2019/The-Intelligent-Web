@@ -8,7 +8,7 @@ var app = require('../app');
 var debug = require('debug')('finalassessment:server');
 var http = require('http');
 var database=require('../databases/db');
-
+var fs = require('fs-extra');
 /**
  * Get port from environment and store in Express.
  */
@@ -19,6 +19,10 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
+var options = {
+  key: fs.readFileSync('./private_access/ca.key'),
+  cert: fs.readFileSync('./private_access/ca.crt')
+};
 
 var server = http.createServer(app);
 
