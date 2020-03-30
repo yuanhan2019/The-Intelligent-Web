@@ -14,10 +14,14 @@
 
     <!--font-aweseme-->
     <link href="/stylesheets/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
+<<<<<<< HEAD
     <!-- TODO add manifest here -->
     <link rel="manifest" href="/manifest.json">
 
 
+=======
+      <script src="/javascripts/login.js"></script>
+>>>>>>> use-ajax
     <title>Login</title>
   </head>
   <body>
@@ -29,14 +33,14 @@
           <div class="card p-4">
             <h3 class="text-center mb-3">Great to see you again</h3>
 
-            <form>
+            <form id="loginForm" onsubmit="onSubmit('/login')">
               <div class="input-group mb-3 mt-3">
                 <div class="input-group-prepend">
                                   <span class="input-group-text" id="inputGroupPrepend">
                                     <i class="fas fa-user"></i>
                                   </span>
                 </div>
-                <input type="text" placeholder="username" class="form-control">
+                <input type="text" name="username" placeholder="username" class="form-control">
 
               </div>
 
@@ -47,9 +51,11 @@
                                     <i class="fas fa-lock"></i>
                                   </span>
                 </div>
-                <input type="text" placeholder="password" class="form-control">
+                <input type="text" name="password" placeholder="password" class="form-control">
 
               </div>
+
+              <div id="results" style="margin-top:30px"></div>
 
               <div class="form-group mb-0  form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -59,11 +65,8 @@
 
               <a  href="#"> Forgot password</a>
 
-
-
-
               <div class="p-3">
-                <a href="/home" class="btn btn-outline-primary btn-block">Login</a>
+                 <input type="submit" value="Login"  class="btn btn-outline-primary btn-block">
               </div>
 
 
@@ -109,7 +112,7 @@
   <script src="/javascripts/idb.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>

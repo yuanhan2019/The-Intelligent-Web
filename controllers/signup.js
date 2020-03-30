@@ -3,14 +3,11 @@ var User = require('../models/user');
 exports.insert=function(req,res) {
     const dat=new Date(Date.now());
     var userData=req.body;
-    if (userData.password1!=userData.password2){
-        res.status(500).send("The new password does not match the confirmation password!");
-    }
      if(userData==null){
          res.status(403).send("No data sent!");
     }
     try{
-        User.find({email_address: userData.address},'email_address',
+        User.find({email_address: userData.address},'username',
             function (err,users) {
                 if (users.length>0) {
                     res.status(500).send("Address is already registered!");
