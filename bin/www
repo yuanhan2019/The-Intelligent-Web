@@ -7,7 +7,10 @@
 var app = require('../app');
 var debug = require('debug')('finalassessment:server');
 var http = require('http');
-var database=require('../databases/db');
+var database = require('../databases/db');
+var io= require('socket.io').listen(server,{pingTimeout:60000});
+var socket_module=require('../socket-io/socket-io');
+socket_module.init(io,app);
 
 /**
  * Get port from environment and store in Express.
