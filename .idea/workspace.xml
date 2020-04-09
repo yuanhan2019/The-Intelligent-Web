@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6477419-279e-4ba8-8e8c-67d80304bd48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/socket-io/socket-io.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/sockettest.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/express/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/sockettest.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/sockettest.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/web/Messaging-SocketIO-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/web/Blog-master" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -101,6 +96,8 @@
       <workItem from="1585410376699" duration="21116000" />
       <workItem from="1585492229788" duration="1417000" />
       <workItem from="1585540483991" duration="8391000" />
+      <workItem from="1586361874914" duration="5613000" />
+      <workItem from="1586451958633" duration="761000" />
     </task>
     <servers />
   </component>
@@ -146,34 +143,34 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1369" y="333" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1585263573537" />
-    <state x="531" y="437" key="FileChooserDialogImpl" timestamp="1586303458213">
+    <state x="531" y="437" key="FileChooserDialogImpl" timestamp="1586384671274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="531" y="437" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1586303458213" />
+    <state x="531" y="437" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1586384671274" />
     <state x="1048" y="687" key="Github.CreateGistDialog" timestamp="1584034307588">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="687" key="Github.CreateGistDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584034307588" />
-    <state width="840" height="169" key="GridCell.Tab.0.bottom" timestamp="1586302192278">
+    <state width="1571" height="159" key="GridCell.Tab.0.bottom" timestamp="1586385269313">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585549581072" />
-    <state width="840" height="169" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1586302192278" />
-    <state width="840" height="169" key="GridCell.Tab.0.center" timestamp="1586302192278">
+    <state width="1571" height="159" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1586385269313" />
+    <state width="1571" height="159" key="GridCell.Tab.0.center" timestamp="1586385269313">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585549581071" />
-    <state width="840" height="169" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1586302192278" />
-    <state width="840" height="169" key="GridCell.Tab.0.left" timestamp="1586302192278">
+    <state width="1571" height="159" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1586385269313" />
+    <state width="1571" height="159" key="GridCell.Tab.0.left" timestamp="1586385269313">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585549581070" />
-    <state width="840" height="169" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1586302192278" />
-    <state width="840" height="169" key="GridCell.Tab.0.right" timestamp="1586302192278">
+    <state width="1571" height="159" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1586385269313" />
+    <state width="1571" height="159" key="GridCell.Tab.0.right" timestamp="1586385269313">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585549581071" />
-    <state width="840" height="169" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1586302192278" />
+    <state width="1571" height="159" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1586385269313" />
     <state width="1074" height="324" key="GridCell.Tab.1.bottom" timestamp="1585446680107">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -226,11 +223,11 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="740" y="416" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1585412819393" />
-    <state x="552" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1585540484501">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="920" y="598" key="com.intellij.ide.util.TipDialog" timestamp="1586361875195">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="552" y="352" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585540484501" />
-    <state x="920" y="598" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585196416607" />
+    <state x="920" y="598" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586361875195" />
     <state x="1275" y="542" width="897" height="605" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585412356304">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
