@@ -8,9 +8,9 @@ var app = require('../app');
 var debug = require('debug')('finalassessment:server');
 var http = require('http');
 var database = require('../databases/db');
-var io= require('socket.io').listen(server,{pingTimeout:60000});
+//var io= require('socket.io').listen(server);
 var socket_module=require('../socket-io/socket-io');
-socket_module.init(io,app);
+//socket_module.init(io,app);
 
 /**
  * Get port from environment and store in Express.
@@ -24,7 +24,7 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
-
+socket_module.getSocketio(server);
 /**
  * Listen on provided port, on all network interfaces.
  */
