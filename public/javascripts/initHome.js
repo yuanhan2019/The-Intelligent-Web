@@ -28,3 +28,13 @@ function init(){
     }
     document.getElementById('username').innerHTML= result;
 }
+
+
+$(document).ready(function() {
+    // endless scrolling
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            $("#wall").append("<div class='item'><img src='path/to/image' width='140' height='100' /></div>");
+        }
+    });
+});
