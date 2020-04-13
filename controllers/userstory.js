@@ -1,0 +1,1 @@
+var Stories = require('../models/stories');
