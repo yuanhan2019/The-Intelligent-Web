@@ -24,15 +24,12 @@
 
 
 <body onload='init()'>
-
 <main class="bg">
 
     <div class="container">
+
         <div class="row">
             <div class="col-4">
-
-
-
                 <div class="card user-data text-center d-none d-sm-block m-4 p-4">
                     <div class="center">
                         <div class="user-avatar"> </div>
@@ -363,6 +360,8 @@
         </div>
 
 
+
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
@@ -380,18 +379,28 @@
                         </div>
                         <div class="row justify-content-center mb-3">
                             <div class="col-4 center mb-2 p-2">
-                                <img class="img-post-modal" src="/images/placeholder.png">
+                                <div class="item">
+                                    <input type="file" name="file" id="file" multiple="multiple" />
+                                </div>
+                            </div>
+                            <div class="col-4 center mb-2 p-2">
+                                <img class="img-post-modal " id="img0" src="./images/placeholder.png">
                             </div>
 
                             <div class="col-4 center mb-2 p-2">
-                                <img class="img-post-modal" src="/images/placeholder.png">
+                                <img class="img-post-modal" src="./images/placeholder.png">
                             </div>
 
 
                             <div class="col-4 center mb-2 p-2">
-                                <img class="img-post-modal" src="/images/placeholder.png">
+                                <img class="img-post-modal" src="./images/placeholder.png">
                             </div>
+
+
                         </div>
+
+
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Post</button>

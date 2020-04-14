@@ -1,5 +1,5 @@
 .bg{
-  background: url(/images/bg.jpeg) center;
+  background: url(../images/bg.jpeg) center;
   background-size: cover;
   min-height: 100vh;
 }
@@ -46,7 +46,7 @@ form{
   border-radius: 50%;
   border: 1 px solid #ccc;
   box-shadow: 0 5pt 15pt rgba(0, 0, 0, 0.22);
-  background: url(/images/bg.jpeg);
+  background: url(../images/bg.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -140,6 +140,42 @@ nav a {
   width: 9rem;
   height: 11rem;
 }
+
+
+
+/******** UPLOAD *************/
+
+.item {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(169, 169, 169);
+  background: url(../images/imgUpload.png);
+  background-position:center;
+  background-repeat: no-repeat;
+}
+.file{
+  width: 100%;
+  height: 100%;
+  font-size:100px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /********* profile *************/

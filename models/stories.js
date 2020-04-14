@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var Stories = new Schema(
     {
-        body: {
+        text: {
             type: String,
             required: true,
         },
@@ -12,6 +12,10 @@ var Stories = new Schema(
             type: String,
             required: true,
             ref: 'user',
+        },
+        userImage:{
+          type: String,
+            required:true,
         },
         comments: {
             comment: {
