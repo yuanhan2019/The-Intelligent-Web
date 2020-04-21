@@ -38,6 +38,7 @@ $(document).ready(function () {
                             $img0.attr("src","../images/delete.png").appendTo($section);
                             var $img = $("<img class='up-img up-opcity'>");
                             $img.attr("src",ev.target.result);
+                            alert(ev.target.result);
                             $img.appendTo($section);
 
                             var $p = $("<p class='img-name-p'>");
@@ -46,8 +47,7 @@ $(document).ready(function () {
                             $input.appendTo($section);
                             var $input2 = $("<input id='tags' name='tags' value='' type='hidden'/>");
                             $input2.appendTo($section);
-                            var $input3 = $("<input id='tags' name='tags' value='' type='hidden'/>");
-                            $input3.appendTo($section);
+                            $(".file").val( '');
 
                         };
                     })(file);
