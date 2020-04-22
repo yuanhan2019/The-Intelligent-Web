@@ -366,6 +366,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
             <div class="modal-dialog" role="document">
+                <form id="uploadStoryForm" onsubmit="onSubmit('/insertStory')">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">New Story</h5>
@@ -392,9 +393,10 @@
                             </div>
                         </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Post</button>
+                        <input type="submit" value="Post" class="btn btn-primary">
                     </div>
                 </div>
+                </form>
             </div>
             <aside class="mask works-mask">
                 <div class="mask-content">

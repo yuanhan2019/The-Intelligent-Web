@@ -2,32 +2,22 @@ var UserStories = require('../models/stories');
 
 
 
-exports.insert = function (req, res) {
-    const dat=new Date(Date.now());
-
-    try{
-
-
-    }catch (e) {
-
-
-
-
+exports.insertStory = function (req, res) {
+    var userData=req.body;
+    if(userData==null){
+        res.status(403).send("No data sent!");
     }
-
-
-
-
+    try{
+        var userStories= new UserStories({
+            userImage:userData.userImage
+            });
+        console.log(userStories);
+        userStories.save(function(err,result){
+        });
+    }catch (e) {
+        res.status(500).send('error ' + e);
+    }
 }
-
-
-exports.get
-
-
-
-
-
-
 
 
 /*

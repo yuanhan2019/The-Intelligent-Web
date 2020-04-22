@@ -1,3 +1,39 @@
+function sendAjaxQuery(url, data) {
+    $.ajax({
+        url: url ,
+        data: data,
+        dataType: 'json',
+        type: 'POST',
+        success:
+            function (dataR) {
+                // no need to JSON parse the result, as we are using
+                // dataType:json, so JQuery knows it and unpacks the
+                // object for us before returning it
+
+                // in order to have the object printed by alert
+                // we need to JSON stringify the object
+                //window.location.href=encodeURI('/home?'+dataR[0].username);
+
+            },
+        error: function (xhr, status, error) {
+            //document.getElementById('results').innerHTML=error;
+            document.getElementById('results').innerHTML= xhr.responseText;
+            //alert('Error: ' + error.message);
+        }
+    });
+}
+
+
+function onSubmit(url) {
+    alert("AJAX");
+    var data={};
+    data["userImage"]=$("#image1").attr("src");
+    //const data = JSON.stringify($(this).serializeArray());
+    sendAjaxQuery(url, data);
+    event.preventDefault();
+}
+
+
 /**upload**/
 $(document).ready(function () {
     $(function(){
@@ -14,6 +50,7 @@ $(document).ready(function () {
             var input = $(this).parent();
             var numUp = imgContainer.find(".up-section").length;
             var totalNum = numUp + fileList.length;
+
             if(fileList.length > 3 || totalNum > 3 ){
                 alert("The number of uploaded pictures cannot exceed 3, please choose again");
             }
@@ -36,9 +73,15 @@ $(document).ready(function () {
                                 delParent = $(this).parent();
                             });
                             $img0.attr("src","../images/delete.png").appendTo($section);
-                            var $img = $("<img class='up-img up-opcity'>");
+
+                            if($("#image1").attr("src")==null){
+                                var $img = $("<img id='image1' class='up-img up-opcity'>");
+                            }else if($("#image2").attr("src")==null){
+                                var $img = $("<img id='image2' class='up-img up-opcity'>");
+                            }else if($("#image3").attr("src")==null) {
+                                var $img = $("<img id='image3' class='up-img up-opcity'>");
+                            }
                             $img.attr("src",ev.target.result);
-                            alert(ev.target.result);
                             $img.appendTo($section);
 
                             var $p = $("<p class='img-name-p'>");
@@ -47,7 +90,7 @@ $(document).ready(function () {
                             $input.appendTo($section);
                             var $input2 = $("<input id='tags' name='tags' value='' type='hidden'/>");
                             $input2.appendTo($section);
-                            $(".file").val( '');
+                            $(".file").val('');
 
                         };
                     })(file);
