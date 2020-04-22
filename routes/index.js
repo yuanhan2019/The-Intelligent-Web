@@ -25,7 +25,7 @@ router.post('/insert',setUser.insert);
 router.post('/login',login.login);
 router.post('/insertStory',setStory.insertStory);
 
-
+router.get('/insertStory',setStory.getAllData);
 
 
 module.exports = router;

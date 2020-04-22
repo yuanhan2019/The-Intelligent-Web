@@ -11,7 +11,7 @@ exports.insertStory = function (req, res) {
         var userStories= new UserStories({
             userImage:userData.userImage
             });
-        console.log(userStories);
+
         userStories.save(function(err,result){
         });
     }catch (e) {
@@ -19,6 +19,19 @@ exports.insertStory = function (req, res) {
     }
 }
 
+exports.getAllData=function(req,res){
+    try {
+        UserStories.find ({},'userImage',
+            function (err,data) {
+                console.log(data);
+                res.setHeader('Content-Type',	'application/json');
+                res.send(JSON.stringify(data));
+            });
+
+    } catch (e) {
+        res.status(500).send('error ' + e);
+    }
+};
 
 /*
 exports.getAllData = function (req, res) {
