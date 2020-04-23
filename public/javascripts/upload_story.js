@@ -27,7 +27,9 @@ function sendAjaxQuery(url, data) {
 function onSubmit(url) {
     alert("AJAX");
     var data={};
-    data["userImage"]=$("#image1").attr("src");
+    data["userImage1"]=$("#image1").attr("src");
+    data["userImage2"]=$("#image2").attr("src");
+    data["userImage3"]=$("#image3").attr("src");
     //const data = JSON.stringify($(this).serializeArray());
     sendAjaxQuery(url, data);
     getAjaxQuery(url);

@@ -6,7 +6,9 @@ var Stories = new Schema(
     {
         text: {type: String},
         userId: {type: String, ref: 'user'},
-        userImage:{ type: String, required:true},
+        userImage1:{ type: String},
+        userImage2:{ type: String},
+        userImage3:{ type: String},
         createAt: {type: Date, default: Date.now()}
     }, {collection: 'stories'}
 );

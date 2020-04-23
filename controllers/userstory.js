@@ -8,12 +8,28 @@ exports.insertStory = function (req, res) {
         res.status(403).send("No data sent!");
     }
     try{
-        var userStories= new UserStories({
-            userImage:userData.userImage
+        if(userData.userImage1==null){
+            console.log("No images");
+        }else if(userData.userImage1!=null && userData.userImage2==null){
+            console.log("Only 1 image has been input");
+            var userStories= new UserStories({
+                userImage1:userData.userImage1
             });
-
-        userStories.save(function(err,result){
-        });
+        }else if(userData.userImage2!=null && userData.userImage3==null){
+            console.log("There are 2 images have been input");
+            var userStories= new UserStories({
+                userImage1:userData.userImage1,
+                userImage2:userData.userImage2
+            });
+        }else if(userData.userImage3!=null){
+            console.log("There are 3 images have been input");
+            var userStories= new UserStories({
+                userImage1:userData.userImage1,
+                userImage2:userData.userImage2,
+                userImage3:userData.userImage3
+            });
+        }
+        userStories.save(function(err,result){});
     }catch (e) {
         res.status(500).send('error ' + e);
     }
@@ -21,8 +37,9 @@ exports.insertStory = function (req, res) {
 
 exports.getAllData=function(req,res){
     try {
-        UserStories.find ({},'userImage',
+        UserStories.find ({},'userImage1',
             function (err,data) {
+                console.log("Find in database");
                 console.log(data);
                 res.setHeader('Content-Type',	'application/json');
                 res.send(JSON.stringify(data));
