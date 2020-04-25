@@ -13,17 +13,23 @@ exports.insertStory = function (req, res) {
         }else if(userData.userImage1!=null && userData.userImage2==null){
             console.log("Only 1 image has been input");
             var userStories= new UserStories({
+                text:userData.text,
+                username:userData.username,
                 userImage1:userData.userImage1
             });
         }else if(userData.userImage2!=null && userData.userImage3==null){
             console.log("There are 2 images have been input");
             var userStories= new UserStories({
+                text:userData.text,
+                username:userData.username,
                 userImage1:userData.userImage1,
                 userImage2:userData.userImage2
             });
         }else if(userData.userImage3!=null){
             console.log("There are 3 images have been input");
             var userStories= new UserStories({
+                text:userData.text,
+                username:userData.username,
                 userImage1:userData.userImage1,
                 userImage2:userData.userImage2,
                 userImage3:userData.userImage3
@@ -37,7 +43,7 @@ exports.insertStory = function (req, res) {
 
 exports.getAllData=function(req,res){
     try {
-        UserStories.find ({},'userImage1',
+        UserStories.find ({},{'userImage1':1, 'userImage2':1,'userImage3':1},
             function (err,data) {
                 console.log("Find in database");
                 console.log(data);

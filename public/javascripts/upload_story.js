@@ -30,6 +30,8 @@ function onSubmit(url) {
     data["userImage1"]=$("#image1").attr("src");
     data["userImage2"]=$("#image2").attr("src");
     data["userImage3"]=$("#image3").attr("src");
+    data["username"]=$("#username").text();
+    data["text"]=$("#textInput").val();
     //const data = JSON.stringify($(this).serializeArray());
     sendAjaxQuery(url, data);
     getAjaxQuery(url);
@@ -54,7 +56,9 @@ function getAjaxQuery(url) {
                 // we need to JSON stringify the object
                 //window.location.href=encodeURI('/home?'+dataR[0].username);
                 $(document).ready(function () {
-                    $("#post1").attr("src",dataR[0].userImage);
+                    $("#post1").attr("src",dataR[0].userImage1);
+                    $("#post2").attr("src",dataR[0].userImage2);
+                    $("#post3").attr("src",dataR[0].userImage3);
                 });
 
             },

@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var Stories = new Schema(
     {
         text: {type: String},
-        userId: {type: String, ref: 'user'},
+        username: {type: String},
         userImage1:{ type: String},
         userImage2:{ type: String},
         userImage3:{ type: String},
