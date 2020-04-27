@@ -16,13 +16,16 @@
     <!--font-aweseme-->
     <link href="/stylesheets/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
     <title>profile</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <script src="/javascripts/profile.js"></script>
 </head>
 
-<body class="bg">
+<body class="bg" onload='initprofile()'>
 
 <div class="container" style="margin-top: 9%;">
     <!--buttons-->
-    <a href="./edit.html" class="btn fixed-left text-white">
+    <a href="./edit" class="btn fixed-left text-white">
         <i class="fas fa-cog"></i>
     </a>
 
@@ -37,17 +40,30 @@
     </div>
 
     <div class="text-center">
-        <h5 class=" mt-3 text-white">USER NAME</h5>
-        <p class="bio mt-2">user bio</p>
+        <h5 class=" mt-3 text-white" id="username">USER NAME</h5>
+        <!-- <p class="bio mt-2">user bio</p> -->
     </div>
 
-    <div class="row justify-content-center">
-        <div class="col-sm-7 col-md-4 ml-4 mr-4">
-            <div class="form-group">
-                <textarea rows="4"  placeholder="bio....." class="form-control"></textarea>
+
+    
+        <div class="row justify-content-center">
+            <div class="col-sm-7 col-md-4 ml-4 mr-4">
+
+                <div class="form-group">
+
+                    <textarea rows="4" name="bio" id="bio" placeholder="bio....." class="form-control"></textarea>
+            
+                    
+                    <button onclick="sendAjaxQuery()" class="btn btn-outline-primary btn-block">
+                        Update
+                    </button>
+                    <div class="alert alert-success" id="results" style="display: none;">
+                        
+                      </div>
+                </div>
             </div>
         </div>
-    </div>
+        
 
 
     <!-- tabs-->
@@ -223,9 +239,9 @@
                 <div class="row justify-content-between">
                     <div class="col-6 mb-3">
                         <div>
-                            <a href="./index.html" class="btn btn-outline-danger">
+                            <button onclick="logout()" class="btn btn-outline-danger">
                                 logout
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -291,9 +307,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
+   
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
             crossorigin="anonymous"></script>
