@@ -1,12 +1,12 @@
 .bg{
   background: url(../images/bg.jpeg) center;
+  background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
 }
 
 
 .card{
-
   margin-bottom: 3rem;
   border-radius: 10px;
   box-shadow: 0 5pt 15pt rgba(0, 0, 0, 0.22);

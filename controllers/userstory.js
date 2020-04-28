@@ -42,11 +42,12 @@ exports.insertStory = function (req, res) {
 }
 
 exports.getAllData=function(req,res){
+    var result={};
     try {
         UserStories.find ({},{'userImage1':1, 'userImage2':1,'userImage3':1},
             function (err,data) {
-                console.log("Find in database");
-                console.log(data);
+              //  console.log("Find in database");
+                //console.log(data);
                 res.setHeader('Content-Type',	'application/json');
                 res.send(JSON.stringify(data));
             });
