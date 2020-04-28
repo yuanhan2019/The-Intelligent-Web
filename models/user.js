@@ -7,8 +7,7 @@ var User = new Schema(
          username: {type: String, required: true, max: 100},
          password: {type: String, required: true, max: 100},
          email_address:{type:String,required: true, max: 100},
-         createAt:{type:Date, default:Date.now()},
-         bio:{ type:String, default:''}
+         createAt:{type:Date, default:Date.now()}
         // dob: {type: Number},
         // whatever: {type: String} //any other field
     },{collection:'user'}

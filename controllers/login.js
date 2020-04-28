@@ -29,23 +29,5 @@ exports.login=function(req,res) {
 
 
 
-    exports.update = function (req, res) {
-        try {
-            User.update({_id:req.params.id}, req.body, function (err, result) {
-                console.log(err , result)
-                if (err) {
-                    res.status(500).send('Invalid data!');
-                } else {
-                    res.setHeader('Content-Type', 'application/json');
-                    res.send(JSON.stringify(result));
-                }
-            });
-        } catch (e) {
-            res.status(500).send('error ' + e);
-        }
-    };
-
-
-
 
 
