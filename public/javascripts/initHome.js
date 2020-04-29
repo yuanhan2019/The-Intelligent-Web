@@ -1,5 +1,7 @@
 function init( ){
 
+
+/*
     $.ajax({
         url: '/initHome',
         async: true,
@@ -27,6 +29,8 @@ function init( ){
             //alert('Error: ' + error.message);
         }
     });
+
+ */
 
 
 
@@ -60,6 +64,35 @@ function init( ){
         result += arr_para[i] + '<br>';
     }
     document.getElementById('username').innerHTML= result;
+
+    $.ajax({
+        url: '/initHome',
+        data: result,
+        dataType: 'String',
+        type: 'POST',
+        success:
+            function (dataR) {
+                // no need to JSON parse the result, as we are using
+                // dataType:json, so JQuery knows it and unpacks the
+                // object for us before returning it
+                // var ret = dataR;
+                // in order to have the object printed by alert
+                // we need to JSON stringify the object
+                window.location.href='/';
+
+            },
+        error: function (xhr, status, error) {
+            //document.getElementById('results').innerHTML=error;
+            document.getElementById('results').innerHTML= xhr.responseText;
+            //alert('Error: ' + error.message);
+        }
+    });
+
+
+
+
+
+
 
 }
 
