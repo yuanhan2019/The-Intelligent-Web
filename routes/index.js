@@ -28,6 +28,8 @@ router.get('/signup', function(req, res, next) {
 router.get('/home',function(req,res,next){
   res.render('home',{ title : 'Express', });
 });
+router.post('/initHome',setStory.getAllData);
+
 
 router.post('/insert',setUser.insert);
 router.post('/login',login.login);
