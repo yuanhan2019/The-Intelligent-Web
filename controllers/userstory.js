@@ -47,7 +47,6 @@ exports.insertStory = function (req, res) {
 
 
 exports.getAllData=function(req,res){
-   var result={};
     try {
         UserStories.find ({username: req.body.username},{},
             function (err,data) {

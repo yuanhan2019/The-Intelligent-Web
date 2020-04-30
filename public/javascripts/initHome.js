@@ -40,12 +40,6 @@ function init(){
 
 //Creat N Stories
 function initdatas(dataR){
-
-
-
-
-
-
 $(document).ready(function() {
     $("#wall").empty();
     var str='';

@@ -38,7 +38,6 @@ router.post('/user/update/:id',login.update);
 
 router.post('/insertStory',setStory.insertStory);
 
-router.get('/insertStory',setStory.getAllData);
 
 
 module.exports = router;

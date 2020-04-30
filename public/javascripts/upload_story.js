@@ -14,6 +14,7 @@ function sendAjaxQuery(url, data) {
                 // we need to JSON stringify the object
                 //window.location.href=encodeURI('/home?'+dataR[0].username);
 
+
             },
         error: function (xhr, status, error) {
             //document.getElementById('results').innerHTML=error;
@@ -36,43 +37,9 @@ function onSubmit(url) {
     data["createAt"]=dat;
     //const data = JSON.stringify($(this).serializeArray());
     sendAjaxQuery(url, data);
-    getAjaxQuery(url);
+    window.location.href='/home';
     event.preventDefault();
 }
-
-/**update story**/
-
-function getAjaxQuery(url) {
-    $.ajax({
-        url: url ,
-        async: true,
-        dataType: 'json',
-        type: 'GET',
-        success:
-            function (dataR) {
-                // no need to JSON parse the result, as we are using
-                // dataType:json, so JQuery knows it and unpacks the
-                // object for us before returning it
-
-                // in order to have the object printed by alert
-                // we need to JSON stringify the object
-                //window.location.href=encodeURI('/home?'+dataR[0].username);
-                $(document).ready(function () {
-                    $("#post1").attr("src",dataR[0].userImage1);
-                    $("#post2").attr("src",dataR[0].userImage2);
-                    $("#post3").attr("src",dataR[0].userImage3);
-                });
-
-            },
-        error: function (xhr, status, error) {
-            //document.getElementById('results').innerHTML=error;
-            //document.getElementById('results').innerHTML= xhr.responseText;
-            //alert('Error: ' + error.message);
-        }
-    });
-}
-
-
 
 
 
