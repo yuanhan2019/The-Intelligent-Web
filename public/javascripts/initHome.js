@@ -79,7 +79,7 @@ $(document).ready(function() {
         str+=' <img id="'+imagepostid+'2" class="img-post" src="">';
         str+='</div>';
         str+='<div class="col-sm-12 col-md-4 center mb-2">';
-        str+='<img id="'+imagepostid+'3" class="img-post" src="">">';
+        str+='<img id="'+imagepostid+'3" class="img-post" src="">';
         str+='</div>';
         str+='</div>';
         str+=' <div class="row justify-content-between">';
