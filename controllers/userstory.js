@@ -15,7 +15,8 @@ exports.insertStory = function (req, res) {
             var userStories= new UserStories({
                 text:userData.text,
                 username:userData.username,
-                userImage1:userData.userImage1
+                userImage1:userData.userImage1,
+                createAt: userData.createAt
             });
         }else if(userData.userImage2!=null && userData.userImage3==null){
             console.log("There are 2 images have been input");
@@ -23,7 +24,8 @@ exports.insertStory = function (req, res) {
                 text:userData.text,
                 username:userData.username,
                 userImage1:userData.userImage1,
-                userImage2:userData.userImage2
+                userImage2:userData.userImage2,
+                createAt: userData.createAt
             });
         }else if(userData.userImage3!=null){
             console.log("There are 3 images have been input");
@@ -32,7 +34,8 @@ exports.insertStory = function (req, res) {
                 username:userData.username,
                 userImage1:userData.userImage1,
                 userImage2:userData.userImage2,
-                userImage3:userData.userImage3
+                userImage3:userData.userImage3,
+                createAt: userData.createAt
             });
         }
         userStories.save(function(err,result){});
