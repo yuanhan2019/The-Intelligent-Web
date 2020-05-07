@@ -14,11 +14,12 @@ function sendAjaxQuery(url, data) {
                 // we need to JSON stringify the object
                 //window.location.href=encodeURI('/home?'+dataR[0].username);
 
+                window.location.href='/home';
 
             },
         error: function (xhr, status, error) {
             //document.getElementById('results').innerHTML=error;
-            document.getElementById('results').innerHTML= xhr.responseText;
+            alert(xhr.responseText)
             //alert('Error: ' + error.message);
         }
     });
@@ -26,18 +27,18 @@ function sendAjaxQuery(url, data) {
 
 
 function onSubmit(url) {
-    alert("AJAX");
+    // alert("AJAX");
     const dat=new Date(Date.now());
     var data={};
     data["userImage1"]=$("#image1").attr("src");
     data["userImage2"]=$("#image2").attr("src");
     data["userImage3"]=$("#image3").attr("src");
-    data["username"]=$("#username").text();
+    data["username"]=JSON.parse(localStorage.user).username;
+    data["userId"]=JSON.parse(localStorage.user)._id;
     data["text"]=$("#textInput").val();
     data["createAt"]=dat;
     //const data = JSON.stringify($(this).serializeArray());
     sendAjaxQuery(url, data);
-    window.location.href='/home';
     event.preventDefault();
 }
 

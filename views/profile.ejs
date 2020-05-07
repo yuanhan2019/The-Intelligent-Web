@@ -1,320 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
     <!-- styles -->
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 
     <!--font-aweseme-->
-    <link href="/stylesheets/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
+    <link
+      href="/stylesheets/fontawesome-free-5.12.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>profile</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
+
     <script src="/javascripts/profile.js"></script>
-</head>
 
-<body class="bg" onload='initprofile()'>
+    <script src="/javascripts/upload_story.js"></script>
 
-<div class="container" style="margin-top: 9%;">
-    <!--buttons-->
-    <a href="./edit" class="btn fixed-left text-white">
+  </head>
+
+  <body class="bg" onload="initprofile()">
+    <div class="container" style="margin-top: 9%;">
+      <!--buttons-->
+      <a href="./edit" class="btn fixed-left text-white">
         <i class="fas fa-cog"></i>
-    </a>
+      </a>
 
-
-    <button class="btn fixed-right text-white">
+      <button class="btn fixed-right text-white">
         <i class="fas fa-bell"></i>
-    </button>
+      </button>
 
-    <!-- profile data-->
-    <div class="center">
-        <div class="user-avatar"> </div>
-    </div>
+      <!-- profile data-->
+      <div class="center">
+        <div class="user-avatar"></div>
+      </div>
 
-    <div class="text-center">
-        <h5 class=" mt-3 text-white" id="username">USER NAME</h5>
+      <div class="text-center">
+        <h5 class="mt-3 text-white" id="username"></h5>
         <!-- <p class="bio mt-2">user bio</p> -->
-    </div>
+      </div>
 
+      <div class="row justify-content-center">
+        <div class="col-sm-7 col-md-4 ml-4 mr-4">
+          <div class="form-group">
+            <textarea
+              rows="4"
+              name="bio"
+              id="bio"
+              placeholder="bio....."
+              class="form-control"
+            ></textarea>
 
-    
-        <div class="row justify-content-center">
-            <div class="col-sm-7 col-md-4 ml-4 mr-4">
-
-                <div class="form-group">
-
-                    <textarea rows="4" name="bio" id="bio" placeholder="bio....." class="form-control"></textarea>
-            
-                    
-                    <button onclick="sendAjaxQuery()" class="btn btn-outline-primary btn-block">
-                        Update
-                    </button>
-                    <div class="alert alert-success" id="results" style="display: none;">
-                        
-                      </div>
-                </div>
-            </div>
+            <button
+              onclick="sendAjaxQuery()"
+              class="btn btn-outline-primary btn-block"
+            >
+              Update
+            </button>
+            <div
+              class="alert alert-success"
+              id="results"
+              style="display: none;"
+            ></div>
+          </div>
         </div>
-        
+      </div>
 
-
-    <!-- tabs-->
-    <div class="center">
-        <nav class="nav nav-pills ">
-            <a class="nav-item nav-link active" data-toggle="tab" href="#personalWall" role="tab" href="#">Personal Wall</a>
-            <a class="nav-item nav-link " data-toggle="tab" href="#storiesWall" role="tab" href="#">Stories Wall</a>
-            <a class="nav-item nav-link " data-toggle="tab" href="#likes" role="tab" href="#">likes</a>
+      <!-- tabs-->
+      <div class="center">
+        <nav class="nav nav-pills">
+          <a
+            class="nav-item nav-link active"
+            data-toggle="tab"
+            href="#personalWall"
+            role="tab"
+            href="#"
+            >Personal Wall</a
+          >
+          <!-- <a class="nav-item nav-link " data-toggle="tab" href="#storiesWall" role="tab" href="#">Stories Wall</a> -->
+          <a
+            class="nav-item nav-link"
+            data-toggle="tab"
+            href="#likes"
+            role="tab"
+            href="#"
+            >likes</a
+          >
         </nav>
-    </div>
+      </div>
 
-    <div class="row justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-sm-12 col-md-8">
-            <div class="tab-content" id="profileTab">
+          <div class="tab-content" id="profileTab">
+            <!-- personal wall -->
+            <div
+              class="tab-pane fade show active p-4"
+              id="personalWall"
+              role="tabpanel"
+            ></div>
 
-                <!-- personal wall -->
-                <div class="tab-pane fade show active p-4" id="personalWall" role="tabpanel">
-                    <div class="card p-4 mb-4">
-                        <p class="mb-3">
-                            <strong>username</strong>
-                            <span class="pl-3">22/2/2020 08:20 pm</span>
-                        </p>
+            <!-- stories -->
 
-                        <p class="lead mb-3">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s
-                        </p>
+            <!-- likes -->
+            <div class="tab-pane fade p-4" id="likes" role="tabpanel"></div>
+          </div>
 
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/post1.jpg">
-                            </div>
-
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/post2.jpg">
-                            </div>
-
-
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/post3.jpg">
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-between">
-                            <div class="col-2">
-                                <i class="fas fa-trash"></i>
-                            </div>
-
-                            <div class="col-6">
-                                <i class="fas fa-heart text-danger"></i> (10)
-                                <i class="far fa-grin-squint text-warning"></i> (15)
-                                <i class="far fa-sad-tear text-warning"></i> (12)
-
-                                <i class="far fa-angry text-warning"></i> (11)
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-
+          <div class="pl-4 pr-4">
+            <div class="row justify-content-between">
+              <div class="col-6 mb-3">
+                <div>
+                  <button onclick="logout()" class="btn btn-outline-danger">
+                    logout
+                  </button>
                 </div>
+              </div>
 
-                <!-- stories -->
-
-                <div class="tab-pane fade  p-4" id="storiesWall" role="tabpanel">
-                    <div class="card p-4 mb-4">
-                        <p class="mb-3">
-                            <strong>username</strong>
-                            <span class="pl-3">22/2/2020 08:20 pm</span>
-                        </p>
-
-                        <p class="lead mb-3">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s
-                        </p>
-
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/story1.jpg">
-                            </div>
-
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/story2.jpeg">
-                            </div>
-
-
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/story3.jpg">
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-between">
-                            <div class="col-2">
-                                <i class="fas fa-trash"></i>
-                            </div>
-
-                            <div class="col-6">
-                                <i class="fas fa-heart text-danger"></i> (10)
-                                <i class="far fa-grin-squint text-warning"></i> (15)
-                                <i class="far fa-sad-tear text-warning"></i> (12)
-
-                                <i class="far fa-angry text-warning"></i> (11)
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-
-
+              <div class="col-6 mb-3">
+                <div class="row justify-content-end">
+                  <button
+                    class="btn btn-outline-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    <i class="fas fa-plus-circle"></i>
+                    add new story
+                  </button>
                 </div>
-
-
-                <!-- likes -->
-                <div class="tab-pane fade  p-4" id="likes" role="tabpanel">
-                    <div class="card p-4 mb-4">
-                        <p class="mb-3">
-                            <strong>username</strong>
-                            <span class="pl-3">22/2/2020 08:20 pm</span>
-                        </p>
-
-                        <p class="lead mb-3">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s
-                        </p>
-
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/post1.jpg">
-                            </div>
-
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/post2.jpg">
-                            </div>
-
-
-                            <div class="col-sm-12 col-md-4 center mb-2">
-                                <img class="img-post" src="./assets/post3.jpg">
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-between">
-                            <div class="col-2">
-                                <i class="fas fa-trash"></i>
-                            </div>
-
-                            <div class="col-6">
-                                <i class="fas fa-heart text-danger"></i> (10)
-                                <i class="far fa-grin-squint text-warning"></i> (15)
-                                <i class="far fa-sad-tear text-warning"></i> (12)
-
-                                <i class="far fa-angry text-warning"></i> (11)
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
+              </div>
             </div>
-
-            <div class="pl-4 pr-4" >
-                <div class="row justify-content-between">
-                    <div class="col-6 mb-3">
-                        <div>
-                            <button onclick="logout()" class="btn btn-outline-danger">
-                                logout
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="col-6 mb-3">
-                        <div class="row justify-content-end">
-                            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-                                <i class="fas fa-plus-circle" ></i>
-                                add new story
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <form id="uploadStoryForm" onsubmit="onSubmit('/insertStory')">
+          <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New Story</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+              <h5 class="modal-title" id="exampleModalLabel">New Story</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div class="modal-body p-4">
-                <div class="form-group">
-                    <textarea class="form-control" rows="5" placeholder="your story....."></textarea>
+              <div class="form-group">
+                <textarea
+                  id="textInput"
+                  class="form-control"
+                  rows="5"
+                  placeholder="your story....."
+                ></textarea>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="img-box full">
+                  <section class="img-section">
+                    <p class="up-p">
+                      Images：<span class="up-span"
+                        >You can upload up to 3 pictures(Maximum 10Mb per
+                        photo)</span
+                      >
+                    </p>
+                    <div class="z_photo upimg-div clear">
+                      <section class="z_file fl">
+                        <img src="../images/imgUpload.png" class="add-img" />
+                        <input
+                          type="file"
+                          name="file"
+                          id="file"
+                          class="file"
+                          value=""
+                          unselectable="on"
+                          accept="image/jpg,image/jpeg,image/png,image/bmp"
+                          multiple
+                        />
+                      </section>
+                    </div>
+                  </section>
                 </div>
-                <div class="row justify-content-center mb-3">
-                    <div class="col-4 center mb-2 p-2">
-                        <img class="img-post-modal" src="./assets/placeholder.png">
-                    </div>
-
-                    <div class="col-4 center mb-2 p-2">
-                        <img class="img-post-modal" src="./assets/placeholder.png">
-                    </div>
-
-
-                    <div class="col-4 center mb-2 p-2">
-                        <img class="img-post-modal" src="./assets/placeholder.png">
-                    </div>
-                </div>
+              </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Post</button>
+              <input type="submit" value="Post" class="btn btn-primary" />
             </div>
+          </div>
+        </form>
+      </div>
+      <aside class="mask works-mask">
+        <div class="mask-content">
+          <p class="del-p">Are you sure you want to delete the picture?</p>
+          <p class="check-p">
+            <span class="del-com wsdel-ok">Yes</span
+            ><span class="wsdel-no">No</span>
+          </p>
         </div>
-
-
+      </aside>
     </div>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   
-    
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-</body>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
