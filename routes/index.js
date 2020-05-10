@@ -28,7 +28,7 @@ router.get('/signup', function(req, res, next) {
 router.get('/home',function(req,res,next){
   res.render('home',{ title : 'Express', });
 });
-router.get('/initHome',setStory.getAllData);
+router.post('/initHome',setStory.getAllData);
 
 
 router.post('/insert',setUser.insert);
@@ -38,12 +38,6 @@ router.post('/user/update/:id',login.update);
 
 router.post('/insertStory',setStory.insertStory);
 
-router.get('/getUserStory/:id',setStory.getUserStory);
-router.delete('/userStory/delete/:id',setStory.userStoryDelete);
-
-router.get('/userStory/addlike/:id/:userId/:num',setStory.addlike);
-router.post('/userStory/addCommant',setStory.addCommant);
-router.post('/ser',setStory.ser);
 
 
 module.exports = router;

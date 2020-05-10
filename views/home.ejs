@@ -1,173 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- styles -->
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 
     <!--font-aweseme-->
-    <link
-      href="/stylesheets/fontawesome-free-5.12.1-web/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="/stylesheets/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/javascripts/initHome.js"></script>
     <script src="/javascripts/upload_story.js"></script>
     <title>Home</title>
-  </head>
+</head>
 
-  <body onload="init()">
-    <main class="bg">
-      <div class="container">
+
+<body onload='init()'>
+<main class="bg">
+
+    <div class="container">
+
         <div class="row">
-          <div class="col-4">
-            <div class="card user-data text-center d-none d-sm-block m-4 p-4">
-              <div class="center">
-                <div class="user-avatar"></div>
-              </div>
-              <h5 id="username" class="mt-3">USER NAME</h5>
-              <p id="bio" class="bio mt-2">user bio</p>
+            <div class="col-4">
+                <div class="card user-data text-center d-none d-sm-block m-4 p-4">
+                    <div class="center">
+                        <div class="user-avatar"> </div>
+                    </div>
+                    <h5 id="username" class=" mt-3">USER NAME</h5>
+                    <p id="bio" class="bio mt-2">user bio</p>
 
-              <a href="/profile" class="show-profile">View Full Profile</a>
-            </div>
-          </div>
-          <div class="col position-relative p-4">
-            <div class="header">
-              <!-- search -->
-              <div class="center">
-                <div class="search">
-                  <i class="fas fa-search"></i>
-                  <input type="input" placeholder="search...." id="ser" onchange="ser()" />
+                    <a href="/profile" class="show-profile">View Full Profile</a>
                 </div>
-              </div>
-            </div>
 
-            <!-- personal wall -->
-            <div class="p-4" style="margin-top: 27%;">
-              <div id="wall"></div>
-              <div class="mt-3">
-                <button
-                  class="btn"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  <i class="fas fa-plus-circle" style="color: #1d2124;"></i>
-                  add new Story
-                </button>
-              </div>
             </div>
-          </div>
+            <div class="col position-relative p-4">
+
+                <div class="header">
+                    <!-- search -->
+                    <div class="center">
+                        <div class="search">
+                            <i class="fas fa-search"></i>
+                            <input type="input" placeholder="search....">
+                        </div>
+                    </div>
+
+                    <!-- tabs-->
+                    <div class="center">
+                        <nav class="nav nav-pills ">
+                            <a class="nav-item nav-link active" data-toggle="tab" href="#wall" role="tab"
+                               href="#">Personal Wall</a>
+                            <a class="nav-item nav-link " data-toggle="tab" href="#stories" role="tab"
+                               href="#">Stories Wall</a>
+                        </nav>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-content" id="myTabContent" style=" margin-top: 27%;">
+
+                    <!-- personal wall -->
+                    <div class="tab-pane fade show active p-4" id="wall" role="tabpanel">
+                    </div>
+
+
+
+
+                    <!-- stories -->
+
+                    <div class="tab-pane fade  p-4" id="stories" role="tabpanel">
+                        <div class="card p-4 mb-4">
+                            <p class="mb-3">
+                                <strong>username</strong>
+                                <span class="pl-3">22/2/2020 08:20 pm</span>
+                            </p>
+
+                            <p class="lead mb-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story1.jpg">
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story2.jpeg">
+                                </div>
+
+
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story3.jpg">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between">
+                                <div class="col-2">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+
+                                <div class="col-6">
+                                    <i class="fas fa-heart text-danger"></i> (10)
+                                    <i class="far fa-grin-squint text-warning"></i> (15)
+                                    <i class="far fa-sad-tear text-warning"></i> (12)
+
+                                    <i class="far fa-angry text-warning"></i> (11)
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card p-4 mb-4">
+                            <p class="mb-3">
+                                <strong>username</strong>
+                                <span class="pl-3">22/2/2020 08:20 pm</span>
+                            </p>
+
+                            <p class="lead mb-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story1.jpg">
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story2.jpeg">
+                                </div>
+
+
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story3.jpg">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between">
+                                <div class="col-2">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+
+                                <div class="col-6">
+                                    <i class="fas fa-heart text-danger"></i> (10)
+                                    <i class="far fa-grin-squint text-warning"></i> (15)
+                                    <i class="far fa-sad-tear text-warning"></i> (12)
+
+                                    <i class="far fa-angry text-warning"></i> (11)
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card p-4 mb-4">
+                            <p class="mb-3">
+                                <strong>username</strong>
+                                <span class="pl-3">22/2/2020 08:20 pm</span>
+                            </p>
+
+                            <p class="lead mb-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story1.jpg">
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story2.jpeg">
+                                </div>
+
+
+                                <div class="col-sm-12 col-md-4 center mb-2">
+                                    <img class="img-post" src="/images/story3.jpg">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between">
+                                <div class="col-2">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+
+                                <div class="col-6">
+                                    <i class="fas fa-heart text-danger"></i> (10)
+                                    <i class="far fa-grin-squint text-warning"></i> (15)
+                                    <i class="far fa-sad-tear text-warning"></i> (12)
+
+                                    <i class="far fa-angry text-warning"></i> (11)
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+                            <button class="btn" data-toggle="modal" data-target="#exampleModal">
+                                <i class="fas fa-plus-circle" style="color: #1d2124;"></i>
+                                add new story
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
         </div>
+
+
+
 
         <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document">
-            <form id="uploadStoryForm" onsubmit="onSubmit('/insertStory')">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">New Story</h5>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body p-4">
-                  <div class="form-group">
-                    <textarea
-                      id="textInput"
-                      class="form-control"
-                      rows="5"
-                      placeholder="your story....."
-                    ></textarea>
-                  </div>
-                  <div class="row justify-content-center mb-3">
-                    <div class="img-box full">
-                      <section class="img-section">
-                        <p class="up-p">
-                          Images：<span class="up-span"
-                            >You can upload up to 3 pictures(Maximum 10Mb per
-                            photo)</span
-                          >
-                        </p>
-                        <div class="z_photo upimg-div clear">
-                          <section class="z_file fl">
-                            <img
-                              src="../images/imgUpload.png"
-                              class="add-img"
-                            />
-                            <input
-                              type="file"
-                              name="file"
-                              id="file"
-                              class="file"
-                              value=""
-                              unselectable="on"
-                              accept="image/jpg,image/jpeg,image/png,image/bmp"
-                              multiple
-                            />
-                          </section>
-                        </div>
-                      </section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <form id="uploadStoryForm" onsubmit="onSubmit('/insertStory')">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Story</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                  </div>
+                    <div class="modal-body p-4">
+                        <div class="form-group">
+                            <textarea id="textInput" class="form-control" rows="5" placeholder="your story....."></textarea>
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <div class="img-box full">
+                                <section class=" img-section">
+                                    <p class="up-p">Images：<span class="up-span">You can upload up to 3 pictures(Maximum 10Mb per photo)</span></p>
+                                    <div class="z_photo upimg-div clear" >
+                                        <section class="z_file fl">
+                                            <img src="../images/imgUpload.png" class="add-img">
+                                            <input type="file" name="file" id="file" class="file" value="" unselectable="on" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple />
+                                        </section>
+                                    </div>
+                                </section>
+                            </div>
+                            </div>
+                        </div>
+                    <div class="modal-footer">
+                        <input type="submit" value="Post" class="btn btn-primary">
+                    </div>
                 </div>
-                <div class="modal-footer">
-                  <input type="submit" value="Post" class="btn btn-primary" />
-                </div>
-              </div>
-            </form>
-          </div>
-          <aside class="mask works-mask">
-            <div class="mask-content">
-              <p class="del-p">Are you sure you want to delete the picture?</p>
-              <p class="check-p">
-                <span class="del-com wsdel-ok">Yes</span
-                ><span class="wsdel-no">No</span>
-              </p>
+                </form>
             </div>
-          </aside>
+            <aside class="mask works-mask">
+                <div class="mask-content">
+                    <p class="del-p ">Are you sure you want to delete the picture?</p>
+                    <p class="check-p"><span class="del-com wsdel-ok">Yes</span><span class="wsdel-no">No</span></p>
+                </div>
+            </aside>
+            </div>
         </div>
-      </div>
-    </main>
+</main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
