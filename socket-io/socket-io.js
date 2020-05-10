@@ -8,10 +8,15 @@ socketio.getSocketio = function(server){ // http(s) server
 
     io.sockets.on('connection', function (socket) {
 
+        console.log('a user connected');
+        socket.emit('event01', { hello: 'world' });
         socket.on('event02', function (data) {
-            socket.emit('event01', { hello: 'world' });
+            console.log("event02" + JSON.stringify(data));
         });
-        
+        socket.on('event03', function (data) {
+            console.log("event03" +JSON.stringify(data));
+            socket.broadcast.emit('event04', { data: data.my });
+        });
     })
 
 };
