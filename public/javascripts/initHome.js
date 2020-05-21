@@ -1,6 +1,4 @@
 function init(){
-
-
     // var url = decodeURI(window.location.href);
     // var arr_para = url.split('?')[1].split('&');
     // var result = '';
@@ -34,6 +32,7 @@ function init(){
             //alert('Error: ' + error.message);
         }
     });
+
 
 }
 
@@ -83,9 +82,15 @@ $(document).ready(function() {
         str+='<div class="col-6">';
         str+='<button id="button1" class="fas fa-heart text-danger"></button>';
         str+='<i id="socketEvent1">10</i>';
-        str+='<i class="far fa-grin-squint text-warning"></i> (15)';
-        str+='<i class="far fa-sad-tear text-warning"></i> (12)';
-        str+='<i class="far fa-angry text-warning"></i> (11)';
+        str+='<input type="text" id="rating'+i+'" list="ratingList">';
+        str+='<datalist id="ratingList">';
+        str+='<option value="1"> 1';
+        str+='<option value="2"> 2';
+        str+='<option value="3"> 3';
+        str+='<option value="4"> 4';
+        str+='<option value="5"> 5';
+        str+='</datalist>';
+        str+='<button id="ratingSubmit'+i+'">Rate</button>';
         str+='</div>';
         str+='</div>';
         str+='</div>';
@@ -118,11 +123,124 @@ $(document).ready(function() {
         $("#button1").click(function(){
             var temp= parseInt($("#socketEvent1").text());
             temp+=1;
+            alert("socketIO");
             $("#socketEvent1").text(temp);
             socket.emit('event03', { my: temp});
 
         });
+        $("#ratingSubmit0").click(function(){
+            var data={};
+            if($("#rating0").val().length==0){
+                 alert("The rate cannot be empty!");
+            }else if($("#rating0").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating0").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit1").click(function(){
+            var data={};
+            if($("#rating1").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating1").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating1").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit2").click(function(){
+            var data={};
+            if($("#rating2").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating2").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating2").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit3").click(function(){
+            var data={};
+            if($("#rating3").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating3").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating3").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit4").click(function(){
+            var data={};
+            if($("#rating4").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating4").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating4").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit5").click(function(){
+            var data={};
+            if($("#rating5").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating5").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating5").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit6").click(function(){
+            var data={};
+            if($("#rating6").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating6").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating6").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit7").click(function(){
+            var data={};
+            if($("#rating7").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating7").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating7").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit8").click(function(){
+            var data={};
+            if($("#rating8").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating8").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating8").val();
+                onRatingSubmit(data);
+            }
+        });
+        $("#ratingSubmit9").click(function(){
+            var data={};
+            if($("#rating9").val().length==0){
+                alert("The rate cannot be empty!");
+            }else if($("#rating9").val()!='') {
+                data["username"] = $("#username").text();
+                data["story"] = $("#username").text();
+                data["rating"] = $("#rating9").val();
+                onRatingSubmit(data);
+            }
+        });
     });
+
+
 
     socket.on('event04', function (data) {
         $(document).ready(function(){

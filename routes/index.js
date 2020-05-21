@@ -6,6 +6,7 @@ var initDB=require('../controllers/init');
 var setUser=require('../controllers/signup');
 var login=require('../controllers/login');
 var setStory=require('../controllers/userstory');
+var setRating=require('../controllers/userrating');
 initDB.init();
 
 //var app=express();
@@ -37,7 +38,7 @@ router.post('/login',login.login);
 router.post('/user/update/:id',login.update);
 
 router.post('/insertStory',setStory.insertStory);
-
+router.post('/insertRating',setRating.insertRating);
 
 
 module.exports = router;
