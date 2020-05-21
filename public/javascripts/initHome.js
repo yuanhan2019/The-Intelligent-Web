@@ -128,115 +128,31 @@ $(document).ready(function() {
             socket.emit('event03', { my: temp});
 
         });
-        $("#ratingSubmit0").click(function(){
+
+        $(".tab-pane").on('click',function(event){
+            var clickedButtonDOM=event.target;
+            var id = clickedButtonDOM.getAttribute('id');
+            var rateButton;
+            var buttonIdx;
+            var rateIdx;
             var data={};
-            if($("#rating0").val().length==0){
-                 alert("The rate cannot be empty!");
-            }else if($("#rating0").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating0").val();
-                onRatingSubmit(data);
+            if(id.length>12) {
+                rateButton = id.substring(0,12);
+                if(rateButton=="ratingSubmit"){
+                    buttonIdx=id.substring(12,id.length);
+                    rateIdx="rating"+buttonIdx;
+                    if($("#"+rateIdx).val().length==0){
+                        alert("The rate cannot be empty!");
+                    }else if($("#"+rateIdx).val()!='') {
+                        data["username"] = $("#username").text();
+                        data["story"] = $("#username").text();
+                        data["rating"] = $("#"+rateIdx).val();
+                        onRatingSubmit(data);
+                    }
+                }
             }
-        });
-        $("#ratingSubmit1").click(function(){
-            var data={};
-            if($("#rating1").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating1").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating1").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit2").click(function(){
-            var data={};
-            if($("#rating2").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating2").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating2").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit3").click(function(){
-            var data={};
-            if($("#rating3").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating3").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating3").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit4").click(function(){
-            var data={};
-            if($("#rating4").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating4").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating4").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit5").click(function(){
-            var data={};
-            if($("#rating5").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating5").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating5").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit6").click(function(){
-            var data={};
-            if($("#rating6").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating6").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating6").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit7").click(function(){
-            var data={};
-            if($("#rating7").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating7").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating7").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit8").click(function(){
-            var data={};
-            if($("#rating8").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating8").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating8").val();
-                onRatingSubmit(data);
-            }
-        });
-        $("#ratingSubmit9").click(function(){
-            var data={};
-            if($("#rating9").val().length==0){
-                alert("The rate cannot be empty!");
-            }else if($("#rating9").val()!='') {
-                data["username"] = $("#username").text();
-                data["story"] = $("#username").text();
-                data["rating"] = $("#rating9").val();
-                onRatingSubmit(data);
-            }
+
+            //alert(id);
         });
     });
 
