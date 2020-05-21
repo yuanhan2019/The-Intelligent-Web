@@ -1,7 +1,5 @@
 var UserStories = require('../models/stories');
 
-
-
 exports.insertStory = function (req, res) {
     var userData=req.body;
     if(userData==null){
