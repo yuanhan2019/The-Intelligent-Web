@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40ca3b5e-e833-45d3-97b0-7e02b8109f7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/initHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/initHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +36,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/web/Week7Solution" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,21 +57,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1571" height="282" key="GridCell.Tab.0.bottom" timestamp="1590151672441">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590097866278">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1571" height="282" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590151672441" />
-    <state width="1571" height="282" key="GridCell.Tab.0.center" timestamp="1590151672441">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590097866278" />
+    <state width="746" height="186" key="GridCell.Tab.0.bottom" timestamp="1590105105057">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1571" height="282" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590151672441" />
-    <state width="1571" height="282" key="GridCell.Tab.0.left" timestamp="1590151672441">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="746" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590105105057" />
+    <state width="788" height="67" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590094488231" />
+    <state width="746" height="186" key="GridCell.Tab.0.center" timestamp="1590105105057">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1571" height="282" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590151672441" />
-    <state width="1571" height="282" key="GridCell.Tab.0.right" timestamp="1590151672441">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="746" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590105105057" />
+    <state width="788" height="67" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590094488231" />
+    <state width="746" height="186" key="GridCell.Tab.0.left" timestamp="1590105105056">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1571" height="282" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590151672441" />
+    <state width="746" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590105105056" />
+    <state width="788" height="67" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590094488231" />
+    <state width="746" height="186" key="GridCell.Tab.0.right" timestamp="1590105105057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590105105057" />
+    <state width="788" height="67" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590094488231" />
   </component>
 </project>
