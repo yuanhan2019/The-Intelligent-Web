@@ -12,7 +12,10 @@ function sendAjaxQuery(url, data) {
 
                 // in order to have the object printed by alert
                 // we need to JSON stringify the object
-                localStorage.user=JSON.stringify(dataR[0]);
+                clearData();
+                localStorage.clear();
+                userstoreCachedData(dataR);
+               // localStorage.user=JSON.stringify(dataR[0]);
                 window.location.href=encodeURI('/home');
                 
 

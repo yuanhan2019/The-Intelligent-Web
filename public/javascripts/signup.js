@@ -35,12 +35,3 @@ function onSubmit(url) {
     event.preventDefault();
 }
 
-function validate() {
-    var pwd1 = document.getElementById("password1").value;
-    var pwd2 = document.getElementById("password2").value;
-    if(pwd1 != pwd2) {
-        signupForm.password2.focus();
-        return false;
-    }
-    return true;
-}

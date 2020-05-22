@@ -25,6 +25,11 @@ function init(){
                 // in order to have the object printed by alert
                 // we need to JSON stringify the object
                 initdatas(dataR);
+               for(var i=0;i<dataR.length;i++){
+                // //alert(dataR._id);
+                userstoriesstoreCachedData(dataR[i].username, dataR[i]);
+              }
+
             },
         error: function (xhr, status, error) {
             //document.getElementById('results').innerHTML=error;
