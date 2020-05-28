@@ -23,6 +23,7 @@
     <script src="/javascripts/database.js"></script>
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/initHome.js"></script>
+    <script src="/javascripts/ranking.js"></script>
     <title>Home</title>
 </head>
 
@@ -70,7 +71,21 @@
 
 
                 <div class="tab-content" id="myTabContent" style=" margin-top: 27%;">
+                        <div class="card p-4 mb-4">
+                            <p class="mb-3">
+                                <strong>Ranking algorithm</strong>
+                            </p>
 
+                            <p class="lead mb-3">
+                                <form id=“ranking_Form" onsubmit="onRankingSubmit('/ranking')">
+                                    <label for='Name'>your username:</label>
+                                    <input type="text" name="ranking_name" id="ranking_name" value="">
+                                    <input type="submit" name="ranking_submit" value="Submit" id="ranking_submit">
+                                </form>
+                                <div id="ranking_results" style="margin-top:30px"></div>
+                            </p>
+
+                        </div>
                     <!-- personal wall -->
                     <div class="tab-pane fade show active p-4" id="wall" role="tabpanel">
                     </div>
