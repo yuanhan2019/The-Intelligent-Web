@@ -4,13 +4,21 @@ module.exports = class Euclidean {
 
     // Returns a distance-based similarity score for person1 and person2
     static sim(prefs, person1, person2) {
-
-        // Get the list of shared_items
-        let person1Movies = _.map(prefs[person1], (n) => {
-            return _.keys(n)[0];
+        let ratings1;
+        let ratings2;
+        _.forIn(prefs, (value, key) => {
+            if(value['userId']==person1){
+                ratings1=value['ratings'];
+            }else if(value['userId']==person2){
+                ratings2=value['ratings'];
+            }
         });
-        let person2Movies = _.map(prefs[person2], (n) => {
-            return _.keys(n)[0];
+        // Get the list of shared_items
+        let person1Movies = _.map(ratings1, (n) => {
+            return _.values(n)[0];
+        });
+        let person2Movies = _.map(ratings2, (n) => {
+            return _.values(n)[0];
         });
         let sharedMovies = _.intersection(person1Movies, person2Movies);
 
@@ -21,13 +29,12 @@ module.exports = class Euclidean {
         let sum = 0;
         _.forEach(sharedMovies, (value) => {
 
-            let person1Rating = _.values(_.find(prefs[person1], (e) => {
-                if (e[value]) return e[value];
-            }))[0];
-            let person2Rating = _.values(_.find(prefs[person2], (e) => {
-                if (e[value]) return e[value];
-            }))[0];
-
+            let person1Rating = _.values(_.find(ratings1, (e) => {
+                if (_.values(e)[0]==value) return _.values(e)[0];
+            }))[1];
+            let person2Rating = _.values(_.find(ratings2, (e) => {
+                if (_.values(e)[0]==value) return _.values(e)[0];
+            }))[1];
             let calc = Math.pow(person1Rating - person2Rating, 2);
             sum += calc;
         });
