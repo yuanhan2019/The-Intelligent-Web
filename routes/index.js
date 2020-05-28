@@ -42,94 +42,13 @@ router.post('/user/update/:id',login.update);
 router.post('/insertStory',setStory.insertStory);
 router.post('/insertRating',setRating.insertRating);
 router.post('/ranking', function (req, res, next) {
-  let name = req.body.ranking_name;
+  //let name = req.body.ranking_name;
   console.log("In post");
   let ranking= new Ranking();
-  let results= ranking.getRecommendations(critics, name, 'sim_euclidean');
+  let results= ranking.getRecommendations(req,body.users, "user_1", 'sim_euclidean');
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(results));
 });
 
-const critics = {
-
-  "users": [
-    {
-      "userId": "user_0",
-      "ratings": [
-        {
-          "storyId": "story_1",
-          "rating": 5
-        },
-        {
-          "storyId": "story_2",
-          "rating": 5
-        },
-        {
-          "storyId": "story_3",
-          "rating": 2
-        },
-        {
-          "storyId": "story_4",
-          "rating": 4
-        },
-        {
-          "storyId": "story_5",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "userId": "user_1",
-      "ratings": [
-        {
-          "storyId": "story_1",
-          "rating": 1
-        },
-        {
-          "storyId": "story_2",
-          "rating": 5
-        },
-        {
-          "storyId": "story_4",
-          "rating": 3
-        },
-        {
-          "storyId": "story_5",
-          "rating": 3
-        },
-        {
-          "storyId": "story_6",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "userId": "user_2",
-      "ratings": [
-        {
-          "storyId": "story_1",
-          "rating": 3
-        },
-        {
-          "storyId": "story_2",
-          "rating": 2
-        },
-        {
-          "storyId": "story_6",
-          "rating": 2
-        },
-        {
-          "storyId": "story_7",
-          "rating": 3
-        },
-        {
-          "storyId": "story_8",
-          "rating": 5
-        }
-      ]
-    }
-  ]
-
-}
 
 module.exports = router;

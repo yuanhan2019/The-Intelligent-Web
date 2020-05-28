@@ -46,12 +46,11 @@ $(document).ready(function () {
 
                 console.log("JSON：");
                 let json = JSON.parse(this.result);
-                console.log(json.users);
+                //console.log(json.users);
+                sendRankingAjaxQuery('/ranking',json);
+
             };
-
-
         });
-
 
 
     });
