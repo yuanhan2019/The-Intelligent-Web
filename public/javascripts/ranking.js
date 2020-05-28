@@ -42,12 +42,11 @@ $(document).ready(function () {
             reader.readAsText(selectedFile);
 
             reader.onload = function(){
-                console.log("results：", this.result);
+                console.log("results：", this.result['users']);
 
                 console.log("JSON：");
-                alert(JSON.stringify(this.result));
                 let json = JSON.parse(this.result);
-                console.log(json.users[0]);
+              //  console.log(json.users);
             };
 
 
