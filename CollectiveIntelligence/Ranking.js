@@ -45,42 +45,45 @@ module.exports = class Rank {
 
         let totals = {};
         let simSums = {};
+        //let prefTemp=prefs['users'];
+        let personRating;
+        //console.log(prefTemp);
+        _.forIn(prefs, (value, key) => {
+            if(value['userId']==person){
+                personRating=value['ratings'];
+            }
+        });
+        console.log(personRating);
+        _.forIn(prefs, (value, key) => {
+            //console.log(value);
+            // console.log(value['userId']);
+            // console.log(person);
+            if(value['userId']!=person){
+                let sim;
+                if (similarity === 'sim_pearson')
+                    sim = Pearson.sim(prefs, person, key);
+                if (similarity === 'sim_euclidean')
+                    sim = Euclidean.sim(prefs, person, value['userId']);
+                // Ignore scores of zero or lower
+                if (sim <= 0) return;
+                _.each(value['ratings'], (pref) => {
+                    let key = _.values(pref)[0];
+                    let keyTemp={
+                        storyId:key
+                    };
+                    let seen = _.some(personRating, keyTemp);
+                    if (!seen) {
+                        // Similarity * Score
+                        if (totals[key] === undefined) totals[key] = 0;
+                        totals[key] += _.values(pref)[1] * sim;
+                        // Sum of similarities
+                        if (simSums[key] === undefined) simSums[key] = 0;
+                        simSums[key] += sim;
+                    }
+                });
+            }else{
 
-        // Don't compare me to myself
-        let prefsWithoutPerson = _.omit(prefs, person);
-
-        _.forIn(prefsWithoutPerson, (value, key) => {
-
-            let sim;
-
-            if (similarity === 'sim_pearson')
-                sim = Pearson.sim(prefs, person, key);
-
-            if (similarity === 'sim_euclidean')
-                sim = Euclidean.sim(prefs, person, key);
-
-            // Ignore scores of zero or lower
-            if (sim <= 0) return;
-
-            _.each(prefs[key], (pref) => {
-
-                let key = _.keys(pref)[0];
-                let seen = _.some(prefs[person], key);
-
-                if (!seen) {
-
-                    // Similarity * Score
-                    if (totals[key] === undefined) totals[key] = 0;
-                    totals[key] += pref[key] * sim;
-
-                    // Sum of similarities
-                    if (simSums[key] === undefined) simSums[key] = 0;
-                    simSums[key] += sim;
-
-                }
-
-            });
-
+            }
         });
 
         let scores = _.map(totals, (value, key) => {
