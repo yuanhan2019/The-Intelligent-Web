@@ -43,7 +43,6 @@ function userstoreCachedData(userObject) {
             var tx = db.transaction(USER_STORE_NAME, 'readwrite');
             var store = tx.objectStore(USER_STORE_NAME);
             await store.put(userObject[0]);
-            return tx.complete;
         }).then(function () {
             //console.log('added item to the store! '+ JSON.stringify(userObject[0]));
             localStorage.user=JSON.stringify(userObject[0]);
@@ -62,7 +61,6 @@ function userstoriesstoreCachedData(username, storiesObject) {
                 var tx = db.transaction(STORIES_STORE_NAME, 'readwrite');
                 var store = tx.objectStore(STORIES_STORE_NAME);
                 await store.put(storiesObject);
-                return tx.complete;
             }).then(function () {
                // console.log('added item to the store! ' + JSON.stringify(storiesObject));
             }).catch(function (error) {

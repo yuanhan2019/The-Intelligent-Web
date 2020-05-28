@@ -43,7 +43,13 @@ $(document).ready(function () {
                 console.log("JSON：");
                 let json = JSON.parse(this.result);
                 //console.log(json);
-                sendRankingAjaxQuery('/ranking',json.users);
+                var data={};
+                var data1={};
+                data['users']=json['users'][0];
+                data1['users']=json['users'];
+                console.log(data1.size);
+                console.log(data1);
+                sendRankingAjaxQuery('/ranking',data1);
             };
         });
 
