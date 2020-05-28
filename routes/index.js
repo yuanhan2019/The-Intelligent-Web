@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser= require("body-parser");
 var fs = require('fs');
 var path = require('path');
 var initDB=require('../controllers/init');
@@ -11,7 +10,9 @@ var setRating=require('../controllers/userrating');
 const Ranking= require('../CollectiveIntelligence/Ranking');
 initDB.init();
 
+
 //var app=express();
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -45,7 +46,7 @@ router.post('/ranking', function (req, res, next) {
   //let name = req.body.ranking_name;
   console.log("In post");
   let ranking= new Ranking();
-  let results= ranking.getRecommendations(req,body.users, "user_1", 'sim_euclidean');
+  let results= ranking.getRecommendations(req.body, "user_1", 'sim_euclidean');
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(results));
 });
