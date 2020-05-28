@@ -77,11 +77,17 @@
                             </p>
 
                             <p class="lead mb-3">
+                                <button style="position:relative;" class="btn btn-info btn-fill btn-wd" id="ranking-btn" name="ranking-btn">
+                                    upload ranking file
+                                    <input name="ranking_file" id="ranking_file" class="ranking_file" style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0" type="file" accept="application/json"/>
+                                </button>
+                                <div id="ranking_results" style="margin-top:30px"></div>
                                 <form id=“ranking_Form" onsubmit="onRankingSubmit('/ranking')">
-                                    <label for='Name'>your username:</label>
+                                    <label for='Name'>upload the JSON File data:</label>
                                     <input type="text" name="ranking_name" id="ranking_name" value="">
                                     <input type="submit" name="ranking_submit" value="Submit" id="ranking_submit">
                                 </form>
+
                                 <div id="ranking_results" style="margin-top:30px"></div>
                             </p>
 

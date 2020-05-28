@@ -32,4 +32,27 @@ function onRankingSubmit(url) {
     sendRankingAjaxQuery(url, data);
     event.preventDefault();
 }
+/**upload ranking file**/
+$(document).ready(function () {
+    $(function(){
+
+        $(".ranking_file").change(function(){
+            var selectedFile =this.files[0];
+            var reader = new FileReader();
+            reader.readAsText(selectedFile);
+
+            reader.onload = function(){
+                //console.log("results：", this.result['users']);
+
+                console.log("JSON：");
+                let json = JSON.parse(this.result);
+                //console.log(json.users);
+                sendRankingAjaxQuery('/ranking',json);
+
+            };
+        });
+
+
+    });
+});
 

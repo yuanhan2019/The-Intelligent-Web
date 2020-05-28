@@ -45,7 +45,7 @@ function userstoreCachedData(userObject) {
             await store.put(userObject[0]);
             return tx.complete;
         }).then(function () {
-            console.log('added item to the store! '+ JSON.stringify(userObject[0]));
+            //console.log('added item to the store! '+ JSON.stringify(userObject[0]));
             localStorage.user=JSON.stringify(userObject[0]);
         }).catch(function (error) {
             localStorage.user=JSON.stringify(userObject[0]);
@@ -64,7 +64,7 @@ function userstoriesstoreCachedData(username, storiesObject) {
                 await store.put(storiesObject);
                 return tx.complete;
             }).then(function () {
-                console.log('added item to the store! ' + JSON.stringify(storiesObject));
+               // console.log('added item to the store! ' + JSON.stringify(storiesObject));
             }).catch(function (error) {
             });
         }
