@@ -58,6 +58,8 @@ $(document).ready(function() {
     $("#wall").empty();
     var str='';
     var userid='';
+    var storyid='';
+    var scoreid='';
     var createatid='';
     var textid='';
     var imagepostid='';
@@ -70,6 +72,8 @@ $(document).ready(function() {
 
         str='<div class="card p-4 mb-4">';
         str+='<p class="mb-3">';
+        storyid="storyid"+i;
+        str+=' <strong id="'+storyid+'"></strong>';
         userid="userid"+i;
         str+=' <strong id="'+userid+'"></strong>';
         createatid="createatid"+i;
@@ -91,8 +95,10 @@ $(document).ready(function() {
         str+='</div>';
         str+='</div>';
         str+=' <div class="row justify-content-between">';
-        str+='<div class="col-2">';
-        str+=' <i class="fas fa-trash"></i>';
+        str+='<div class="col-6">';
+        scoreid="scoreid"+i;
+        str+=' <strong>Score: </strong>';
+        str+='<span id="'+scoreid+'" class="pl-3"></span>';
         str+='</div>';
         str+='<div class="col-6">';
         str+='<button id="button1" class="fas fa-heart text-danger"></button>';
@@ -112,6 +118,8 @@ $(document).ready(function() {
 
         $("#wall").append(str);
         $("#"+userid+"").append(dataR[i].username);
+        $("#"+storyid+"").append(dataR[i].storyId);
+        $("#"+scoreid+"").append(dataR[i].score);
         $("#"+createatid+"").append(dataR[i].createAt);
         $("#"+textid+"").append(dataR[i].text);
         $("#"+imagepostid+"1").attr("src",dataR[i].userImage1);

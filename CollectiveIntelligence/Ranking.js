@@ -41,7 +41,7 @@ module.exports = class Rank {
 // Gets recommendations for a person by using a weighted average
 // of every other user's rankings
 
-    getRecommendations(prefs, person, similarity = 'sim_pearson') {
+    getRecommendations(prefs,stories, person, n,similarity = 'sim_pearson') {
 
         let totals = {};
         let simSums = {};
@@ -53,7 +53,7 @@ module.exports = class Rank {
                 personRating=value['ratings'];
             }
         });
-        console.log(personRating);
+        //console.log(personRating);
         _.forIn(prefs, (value, key) => {
             //console.log(value);
             // console.log(value['userId']);
@@ -81,20 +81,32 @@ module.exports = class Rank {
                         simSums[key] += sim;
                     }
                 });
-            }else{
-
             }
         });
-
+        let text;
+        let userId;
         let scores = _.map(totals, (value, key) => {
+            //console.log("story: ", key);
+
+            _.forIn(stories, (value1, key1) => {
+                if(value1['storyId']==key){
+                    text=value1['text'];
+                    userId=value1['userId'];
+                }
+            });
             return {
-                story: key,
+                username: userId,
+                storyId: key,
+                text: text,
                 score: value / simSums[key]
             }
         });
 
         scores = _.reverse(_.sortBy(scores, 'score'));
-
+        if(n==''){
+            n=10;
+        }
+        scores.length = n;
         return scores;
 
     }

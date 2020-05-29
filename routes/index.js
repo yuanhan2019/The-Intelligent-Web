@@ -45,9 +45,10 @@ router.post('/insertRating',setRating.insertRating);
 router.post('/ranking', function (req, res, next) {
   //let name = req.body.ranking_name;
   console.log("In post");
-  console.log(req.body.users);
+  var users=req.body.users;
+  var stories=req.body.stories;
   let ranking= new Ranking();
-  let results= ranking.getRecommendations(req.body.users, "user_1", 'sim_euclidean');
+  let results= ranking.getRecommendations(users,stories, "user_1",10, 'sim_euclidean');
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(results));
 });
