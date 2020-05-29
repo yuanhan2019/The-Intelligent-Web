@@ -71,7 +71,7 @@ function initstoriesdatas(dataR){
         var textid='';
         var imagepostid='';
         var deleteid='';
-        var likesid='';
+        var buttonid='';
 
 
 
@@ -108,7 +108,8 @@ function initstoriesdatas(dataR){
             str+='<span id="'+scoreid+'" class="pl-3"></span>';
             str+='</div>';
             str+='<div class="col-6">';
-            str+='<button id="button1" class="fas fa-heart text-danger"></button>';
+            buttonid="buttonid"+i;
+            str+='<button id="'+buttonid+'" class="fas fa-heart text-danger"></button>';
             str+='<i id="socketEvent1">10</i>';
             str+='<input type="text" id="rating'+i+'" list="ratingList">';
             str+='<datalist id="ratingList">';

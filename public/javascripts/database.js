@@ -50,7 +50,9 @@ function initDatabase(){
 }
 //user store
 function userstoreCachedData(userObject) {
+    console.log("In userstoreCachedData!");
     if (dbPromise) {
+        console.log("In 2222");
         dbPromise.then(async db => {
             var tx = db.transaction(USER_STORE_NAME, 'readwrite');
             var store = tx.objectStore(USER_STORE_NAME);

@@ -65,8 +65,7 @@ $(document).ready(function() {
     var imagepostid='';
     var deleteid='';
     var likesid='';
-
-
+    var buttonid='';
 
     for(var i=0;i<dataR.length;i++){
 
@@ -101,7 +100,8 @@ $(document).ready(function() {
         str+='<span id="'+scoreid+'" class="pl-3"></span>';
         str+='</div>';
         str+='<div class="col-6">';
-        str+='<button id="button1" class="fas fa-heart text-danger"></button>';
+        buttonid="button"+i;
+        str+='<button id="'+buttonid+'" class="fas fa-heart text-danger"></button>';
         str+='<i id="socketEvent1">10</i>';
         str+='<input type="text" id="rating'+i+'" list="ratingList">';
         str+='<datalist id="ratingList">';
@@ -138,26 +138,17 @@ $(document).ready(function() {
 //init socket parts
 
     var socket = io.connect();
-    socket.on('event01', function (data) {
-        socket.emit('event02', { my: 'data client' });
-
-    });
     $(document).ready(function(){
-        $("#button1").click(function(){
-            var temp= parseInt($("#socketEvent1").text());
-            temp+=1;
-            alert("socketIO");
-            $("#socketEvent1").text(temp);
-            socket.emit('event03', { my: temp});
-
-        });
 
         $(".tab-pane").on('click',function(event){
             var clickedButtonDOM=event.target;
             var id = clickedButtonDOM.getAttribute('id');
             var rateButton;
+            var socketButton;
             var buttonIdx;
             var rateIdx;
+            var socketIdx;
+            var socketEvent;
             var data={};
             if(id.length>12) {
                 rateButton = id.substring(0,12);
@@ -174,12 +165,27 @@ $(document).ready(function() {
                     }
                 }
             }
+            if(id.length>6){
+                socketButton=id.substring(0,6);
+                if(socketButton=="button"){
+                    buttonIdx=id.substring(6,id.length);
+                    socketIdx="button"+buttonIdx;
+                    socketEvent="socketEvent"+buttonIdx;
+                    var temp= parseInt($("#"+socketEvent).text());
+                    temp+=1;
+                    alert("socketIO",buttonIdx);
+                    $("#"+socketEvent).text(temp);
+                    console.log("Button: ", socketIdx);
+                    socket.emit(socketIdx, { my: temp});
+                }
+
+            }
         });
     });
 
 
 
-    socket.on('event04', function (data) {
+    socket.on('sendToButton1', function (data) {
         $(document).ready(function(){
             $("#socketEvent1").text(data.data);
         });
