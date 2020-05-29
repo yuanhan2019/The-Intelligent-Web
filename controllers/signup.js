@@ -1,5 +1,12 @@
 var User = require('../models/user');
 
+/**
+ * @insert
+ * This functionality is to insert a new user information to database, in user model.
+ * The duplicate username will be checked.
+ *
+ *
+ */
 exports.insert=function(req,res) {
     const dat=new Date(Date.now());
     var userData=req.body;

@@ -1,5 +1,11 @@
 var UserStories = require('../models/stories');
 
+/**
+ * @insertStory
+ * This functionality is to insert a story to database, in stories model.
+ *
+ *
+ */
 exports.insertStory = function (req, res) {
     var userData=req.body;
     if(userData==null){

@@ -1,7 +1,8 @@
 var User = require('../models/user');
 /**
  * @login
- * @
+ * @The function is used for user login, check whether the database has the input username,
+ * If the input username exist, then check whether the password is correct.
  */
 exports.login=function(req,res) {
     const dat=new Date(Date.now());

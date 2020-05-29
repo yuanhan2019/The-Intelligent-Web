@@ -1,5 +1,11 @@
 const _ = require('lodash');
 
+/**
+ * @Euclidean
+ * @ This function is the Euclidean formula, which will output the score between person1 and person2 based
+ * on all prefs.
+ *
+ */
 module.exports = class Euclidean {
 
     // Returns a distance-based similarity score for person1 and person2

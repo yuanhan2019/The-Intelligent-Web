@@ -2,14 +2,19 @@ const _ = require('lodash');
 let Euclidean = require('./Euclidean');
 
 
-
+/**
+ * @Rank
+ * @Parameters: prefs-all the prefs data, stories- all the stories data, person- the user who should be recommended.
+ * The functionality is to rank the top 10 stories for person, sorted by scores which is calculated by using Euclidean formula.
+ *
+ */
 module.exports = class Rank {
 
 
 // Gets recommendations for a person by using a weighted average
 // of every other user's rankings
 
-    getRecommendations(prefs,stories, person, n,similarity = 'sim_pearson') {
+    getRecommendations(prefs,stories, person, n,similarity = 'sim_euclidean') {
 
         let totals = {};
         let simSums = {};
@@ -28,8 +33,6 @@ module.exports = class Rank {
             // console.log(person);
             if(value['userId']!=person){
                 let sim;
-                if (similarity === 'sim_pearson')
-                    sim = Pearson.sim(prefs, person, key);
                 if (similarity === 'sim_euclidean')
                     sim = Euclidean.sim(prefs, person, value['userId']);
                 // Ignore scores of zero or lower

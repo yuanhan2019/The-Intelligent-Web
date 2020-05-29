@@ -1,11 +1,10 @@
+/**
+ * @init
+ * This function is used to initialize the home page.
+ *
+ */
+
 function init(){
-    // var url = decodeURI(window.location.href);
-    // var arr_para = url.split('?')[1].split('&');
-    // var result = '';
-    // for(var i = 0; i < arr_para.length; i++) {
-    //     result += arr_para[i] + '<br>';
-    // }
-    //init end front
     initDatabase();
     document.getElementById('username').innerHTML= JSON.parse(localStorage.user).username;
     document.getElementById('bio').innerHTML= JSON.parse(localStorage.user).bio;
@@ -23,16 +22,12 @@ function init(){
                 // dataType:json, so JQuery knows it and unpacks the
                 // object for us before returning it
 
-                // in order to have the object printed by alert
-                // we need to JSON stringify the object
                 initdatas(dataR);
                 clearstoriesData();
                for(var i=0;i<dataR.length;i++){
                 // //alert(dataR._id);
                 userstoriesstoreCachedData(dataR[i]);
               }
-                //getCachedData();
-               // alert(JSON.stringify(dataR));
 
                 if (document.getElementById('offline_div')!=null)
                     document.getElementById('offline_div').style.display='none';
@@ -40,8 +35,6 @@ function init(){
         error: function (xhr, status, error) {
             showOfflineWarning();
             getCachedData();
-            //initdatas();
-            //alert('Error: ' + error.message);
             const dvv= document.getElementById('offline_div');
             if (dvv!=null)
                 dvv.style.display='block';
@@ -51,7 +44,13 @@ function init(){
 
 }
 
-
+/**
+ * @initdatas
+ * This function is used to initialize the 10 stories in the home page.
+ * Assign each story with different unique ID.
+ * The stories is read from database.
+ *
+ */
 //Creat N Stories
 function initdatas(dataR){
 $(document).ready(function() {
@@ -66,6 +65,7 @@ $(document).ready(function() {
     var deleteid='';
     var likesid='';
     var buttonid='';
+    var socketEventid='';
 
     for(var i=0;i<dataR.length;i++){
 
@@ -102,7 +102,8 @@ $(document).ready(function() {
         str+='<div class="col-6">';
         buttonid="button"+i;
         str+='<button id="'+buttonid+'" class="fas fa-heart text-danger"></button>';
-        str+='<i id="socketEvent1">10</i>';
+        socketEventid="socketEvent"+i;
+        str+='<i id="'+socketEventid+'">10</i>';
         str+='<input type="text" id="rating'+i+'" list="ratingList">';
         str+='<datalist id="ratingList">';
         str+='<option value="1"> 1';
@@ -135,10 +136,11 @@ $(document).ready(function() {
     stradd+='</div>';
     $("#wall").append(stradd);
 
-//init socket parts
+    //init socket parts
 
     var socket = io.connect();
     $(document).ready(function(){
+         // If click on the tab-pane with specific component ID, the corresponding function will be enabled
 
         $(".tab-pane").on('click',function(event){
             var clickedButtonDOM=event.target;
@@ -173,7 +175,6 @@ $(document).ready(function() {
                     socketEvent="socketEvent"+buttonIdx;
                     var temp= parseInt($("#"+socketEvent).text());
                     temp+=1;
-                    alert("socketIO",buttonIdx);
                     $("#"+socketEvent).text(temp);
                     console.log("Button: ", socketIdx);
                     socket.emit(socketIdx, { my: temp});
@@ -182,12 +183,55 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
+    // Socket oi receive from server to sycn the data.
+    socket.on('sendToButton0', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent0").text(data.data);
+        });
+    });
     socket.on('sendToButton1', function (data) {
         $(document).ready(function(){
             $("#socketEvent1").text(data.data);
+        });
+    });
+    socket.on('sendToButton2', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent2").text(data.data);
+        });
+    });
+    socket.on('sendToButton3', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent3").text(data.data);
+        });
+    });
+    socket.on('sendToButton4', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent4").text(data.data);
+        });
+    });
+    socket.on('sendToButton5', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent5").text(data.data);
+        });
+    });
+    socket.on('sendToButton6', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent6").text(data.data);
+        });
+    });
+    socket.on('sendToButton7', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent7").text(data.data);
+        });
+    });
+    socket.on('sendToButton8', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent8").text(data.data);
+        });
+    });
+    socket.on('sendToButton9', function (data) {
+        $(document).ready(function(){
+            $("#socketEvent9").text(data.data);
         });
     });
 });
