@@ -10,9 +10,12 @@ if ('serviceWorker' in navigator) {
     }
 //check for support
     if ('indexedDB' in window) {
-        initDatabase();
+
+       // initDatabase();
     }
     else {
         console.log('This browser doesn\'t support IndexedDB');
     }
+
+
 

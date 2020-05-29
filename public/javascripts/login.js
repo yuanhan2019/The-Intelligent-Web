@@ -14,6 +14,7 @@ function sendAjaxQuery(url, data) {
                 // we need to JSON stringify the object
                 clearData();
                 localStorage.clear();
+                initDatabase();
                 userstoreCachedData(dataR);
                // localStorage.user=JSON.stringify(dataR[0]);
                 window.location.href=encodeURI('/home');

@@ -6,6 +6,7 @@ function init(){
     //     result += arr_para[i] + '<br>';
     // }
     //init end front
+    initDatabase();
     document.getElementById('username').innerHTML= JSON.parse(localStorage.user).username;
     document.getElementById('bio').innerHTML= JSON.parse(localStorage.user).bio;
 //init stories parts
@@ -25,16 +26,25 @@ function init(){
                 // in order to have the object printed by alert
                 // we need to JSON stringify the object
                 initdatas(dataR);
+                clearstoriesData();
                for(var i=0;i<dataR.length;i++){
                 // //alert(dataR._id);
-                userstoriesstoreCachedData(dataR[i].username, dataR[i]);
+                userstoriesstoreCachedData(dataR[i]);
               }
+                //getCachedData();
+               // alert(JSON.stringify(dataR));
 
+                if (document.getElementById('offline_div')!=null)
+                    document.getElementById('offline_div').style.display='none';
             },
         error: function (xhr, status, error) {
-            //document.getElementById('results').innerHTML=error;
-            document.getElementById('results').innerHTML= xhr.responseText;
+            showOfflineWarning();
+            getCachedData();
+            //initdatas();
             //alert('Error: ' + error.message);
+            const dvv= document.getElementById('offline_div');
+            if (dvv!=null)
+                dvv.style.display='block';
         }
     });
 
@@ -170,8 +180,38 @@ $(document).ready(function() {
     });
 });
 }
-/*
 
+
+/**
+ * When the client gets off-line, it shows an off line warning to the user
+ * so that it is clear that the data is stale
+ */
+window.addEventListener('offline', function(e) {
+    // Queue up events for server.
+    console.log("You are offline");
+    showOfflineWarning();
+}, false);
+
+/**
+ * When the client gets online, it hides the off line warning
+ */
+window.addEventListener('online', function(e) {
+    // Resync data with server.
+    console.log("You are online");
+    hideOfflineWarning();
+    //initdatas(dataR);
+}, false);
+
+
+function showOfflineWarning(){
+    if (document.getElementById('offline_div')!=null)
+        document.getElementById('offline_div').style.display='block';
+}
+
+function hideOfflineWarning(){
+    if (document.getElementById('offline_div')!=null)
+        document.getElementById('offline_div').style.display='none';
+}
 
 
 
