@@ -10,7 +10,10 @@ function sendRankingAjaxQuery(url, data) {
                 // dataType:json, so JQuery knows it and unpacks the
                 // object for us before returning it
                 var ret = dataR;
-                document.getElementById('ranking_results').innerHTML= JSON.stringify(ret);
+                var stories={};
+                stories['storyId']=dataR[0].story;
+                initdatas(dataR);
+                document.getElementById('ranking_results').innerHTML= "10 recommendations has been displayed below!";
             },
         error: function (xhr, status, error) {
             //document.getElementById('results').innerHTML=error;
@@ -31,7 +34,6 @@ function onRankingSubmit(url) {
 /**upload ranking file**/
 $(document).ready(function () {
     $(function(){
-
         $(".ranking_file").change(function(){
             var selectedFile =this.files[0];
             var reader = new FileReader();
@@ -45,11 +47,10 @@ $(document).ready(function () {
                 //console.log(json);
                 var data={};
                 var data1={};
-                data['users']=json['users'][0];
-                data1['users']=json['users'];
-                console.log(data1.size);
-                console.log(data1);
-                sendRankingAjaxQuery('/ranking',data1);
+                data['users']=json['users'];
+                data['stories']=json['stories'];
+                sendRankingAjaxQuery('/ranking',data);
+
             };
         });
 
