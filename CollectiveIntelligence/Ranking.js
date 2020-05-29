@@ -1,42 +1,10 @@
 const _ = require('lodash');
 let Euclidean = require('./Euclidean');
-let Pearson = require('./Pearson');
+
 
 
 module.exports = class Rank {
 
-// Returns the best matches for person from the prefs dictionary.
-// Number of results and similarity function are optional params.
-
-    topMatches(prefs, person, n = 5, similarity = 'sim_pearson') {
-
-        let scores = [];
-        let prefsWithoutPerson = _.omit(prefs, person);
-        let num=1;
-        _.forIn(prefsWithoutPerson, (value, key) => {
-            let score = {
-                person: key
-            };
-
-            if(num==1) {
-                if (similarity === 'sim_pearson') {
-                    score.score = Pearson.sim(prefs, person, key);
-                    num+=1;
-                }
-            }
-            if (similarity === 'sim_euclidean')
-                score.score = Euclidean.sim(prefs, person, key);
-
-            scores.push(score);
-
-        });
-
-        scores = _.reverse(_.sortBy(scores, 'score'));
-        scores.length = n;
-
-        return scores;
-
-    }
 
 // Gets recommendations for a person by using a weighted average
 // of every other user's rankings

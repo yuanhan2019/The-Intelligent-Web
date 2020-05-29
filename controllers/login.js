@@ -1,5 +1,8 @@
 var User = require('../models/user');
-
+/**
+ * @login
+ * @
+ */
 exports.login=function(req,res) {
     const dat=new Date(Date.now());
     var userData=req.body;

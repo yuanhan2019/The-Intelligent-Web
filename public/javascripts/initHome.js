@@ -11,7 +11,7 @@ function init(){
     document.getElementById('bio').innerHTML= JSON.parse(localStorage.user).bio;
 //init stories parts
     $.ajax({
-        url: 'initHome' ,
+        url: '/initHome' ,
         data: {
             username:JSON.parse(localStorage.user).username
         },
